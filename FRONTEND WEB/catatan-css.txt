@@ -1,0 +1,11 @@
+
+
+serif : jenis font yang memiliki runcing pada garis akhir karakternya. Times New Roman merupakan salah satu jenis serif font.
+sans-serif : jenis font yang tidak meruncing pada garis akhir karakternya. Contohnya “Open Sans”, “Fira Sans” dan lainnya.
+monospace : jenis font yang memiliki nilai lebar tiap karakternya sama. Consolas merupakan salah satu jenisnya.
+cursive: jenis font yang tampak seperti handwriting atau hasil tulisan tangan.
+fantasy : jenis font yang merepresentasikan karakteristik yang menyenangkan.
+system-ui : jika menerapkan nilai ini maka font yang diterapkan akan sama seperti font yang digunakan pada sistem operasi kita.
+math : jenis font yang digunakan untuk penulisan rumus-rumus matematika.
+emoji : jenis font yang digunakan untuk menampilkan emoji.
+fangsong : jenis font yang menampilkan gaya penulisan Chinese.
