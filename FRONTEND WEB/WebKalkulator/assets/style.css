@@ -4,12 +4,6 @@
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 513px) {
-  .button {
-    padding: 10px;
-  }
-}
-
 body {
   font-family: sans-serif;
 }
@@ -67,4 +61,10 @@ body {
   border-radius: 5px;
   padding: 30px;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 513px) {
+  .button {
+    padding: 10px;
+  }
 }
