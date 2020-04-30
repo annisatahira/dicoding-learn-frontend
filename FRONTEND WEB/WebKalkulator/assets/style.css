@@ -33,6 +33,25 @@ body {
   cursor: pointer;
 }
 
+.button:hover {
+  font-weight: bold;
+}
+
 .double {
   flex-basis: 50%;
+}
+
+.display {
+  color: white;
+  width: 100%;
+  padding: 10px, 20px;
+  background: #333333;
+  border: 1px solid black;
+  font-size: 2em;
+}
+
+.negative,
+.operator,
+.equals {
+  background: coral;
 }
