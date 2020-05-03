@@ -23,7 +23,11 @@ function clearCalculator() {
 
 //fungsi menambah angka
 function inputDigit(digit) {
-  calculator.displayNumber += digit;
+  if (calculator.displayNumber === "0") {
+    calculator.displayNumber = digit;
+  } else {
+    calculator.displayNumber += digit;
+  }
 }
 
 const buttons = document.querySelectorAll(".button");
