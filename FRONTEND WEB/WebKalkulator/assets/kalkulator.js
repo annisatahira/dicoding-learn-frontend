@@ -23,10 +23,17 @@ function clearCalculator() {
 
 //fungsi menambah angka
 function inputDigit(digit) {
-  if (calculator.displayNumber === "0") {
+  if (
+    calculator.waitingForSecondNumber &&
+    calculator.firsNumber === calculator.displayNumber
+  ) {
     calculator.displayNumber = digit;
   } else {
-    calculator.displayNumber += digit;
+    if (calculator.displayNumber === "0") {
+      calculator.displayNumber = digit;
+    } else {
+      calculator.displayNumber += digit;
+    }
   }
 }
 
@@ -36,6 +43,35 @@ function inverseNumber() {
     return;
   }
   calculator.displayNumber = calculator.displayNumber * -1;
+}
+
+//operator
+function handleOperator(operator) {
+  if (!calculator.waitingForSecondNumber) {
+    calculator.operator = operator;
+    calculator.waitingForSecondNumber = true;
+    calculator.firsNumber = calculator.displayNumber;
+  } else {
+    alert("operator sudah ditetapkan");
+  }
+}
+
+function performCalculation() {
+  if (calculator.firsNumber == null || calculator.operator == null) {
+    alert("anda belum menetapkan operator");
+    return;
+  }
+
+  let result = 0;
+  if (calculator.operator === "+") {
+    //parseInt() untuk mengubah nilai string menjadi number.
+    result =
+      parseInt(calculator.firsNumber) + parseInt(calculator.displayNumber);
+  } else {
+    result =
+      parseInt(calculator.firsNumber) - parseInt(calculator.displayNumber);
+  }
+  calculator.displayNumber = result;
 }
 
 const buttons = document.querySelectorAll(".button");
