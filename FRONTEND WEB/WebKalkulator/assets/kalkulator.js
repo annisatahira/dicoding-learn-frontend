@@ -17,7 +17,7 @@ function updateDisplay() {
 function clearCalculator() {
   calculator.displayNumber = "0";
   calculator.operator = null;
-  calculator.firsNumber = null;
+  calculator.firstNumber = null;
   calculator.waitingForSecondNumber = false;
 }
 
@@ -25,7 +25,7 @@ function clearCalculator() {
 function inputDigit(digit) {
   if (
     calculator.waitingForSecondNumber &&
-    calculator.firsNumber === calculator.displayNumber
+    calculator.firstNumber === calculator.displayNumber
   ) {
     calculator.displayNumber = digit;
   } else {
@@ -50,14 +50,14 @@ function handleOperator(operator) {
   if (!calculator.waitingForSecondNumber) {
     calculator.operator = operator;
     calculator.waitingForSecondNumber = true;
-    calculator.firsNumber = calculator.displayNumber;
+    calculator.firstNumber = calculator.displayNumber;
   } else {
     alert("operator sudah ditetapkan");
   }
 }
 
 function performCalculation() {
-  if (calculator.firsNumber == null || calculator.operator == null) {
+  if (calculator.firstNumber == null || calculator.operator == null) {
     alert("anda belum menetapkan operator");
     return;
   }
@@ -66,12 +66,22 @@ function performCalculation() {
   if (calculator.operator === "+") {
     //parseInt() untuk mengubah nilai string menjadi number.
     result =
-      parseInt(calculator.firsNumber) + parseInt(calculator.displayNumber);
+      parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
   } else {
     result =
-      parseInt(calculator.firsNumber) - parseInt(calculator.displayNumber);
+      parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
   }
+
+  // objek yang akan dikirimkan sebagai argumen fungsi putHistory()
+  const history = {
+    firstNumber: calculator.firstNumber,
+    secondNumber: calculator.displayNumber,
+    operator: calculator.operator,
+    result: result,
+  };
+  putHistory(history);
   calculator.displayNumber = result;
+  renderHistory();
 }
 
 const buttons = document.querySelectorAll(".button");
