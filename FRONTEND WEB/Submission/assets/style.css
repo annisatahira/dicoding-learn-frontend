@@ -41,9 +41,9 @@ nav li {
   list-style-type: none;
 }
 
-/* .banner {
+.banner {
   position: relative;
-} */
+}
 
 .banner img {
   width: 100%;
