@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Galada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap");
 
 body {
@@ -8,7 +8,8 @@ body {
 }
 
 span {
-  font-family: "Galada", cursive;
+  font-family: "Pacifico", cursive;
+  color: saddlebrown;
 }
 
 header {
@@ -30,7 +31,8 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline;
+  font-weight: bold;
+  color: saddlebrown;
 }
 
 nav li {
@@ -50,12 +52,22 @@ nav li {
   object-position: center;
 }
 
-.text-center {
+.text-banner {
+  top: 40%;
+  left: 55px;
   position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-  text-align: center;
+  text-align: left;
   color: white;
+}
+
+.text-banner h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Pacifico", cursive;
+}
+
+.text-banner p {
+  text-align: left;
+  line-height: 0.7;
+  font-size: 18px;
 }
