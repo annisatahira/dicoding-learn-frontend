@@ -12,8 +12,13 @@ span {
   color: saddlebrown;
 }
 
-h1 {
+h1,
+h3 {
   text-align: center;
+}
+
+h1 {
+  font-size: 30px;
 }
 
 br {
@@ -99,7 +104,7 @@ nav li {
 }
 
 .text-banner h1 {
-  font-size: 20px;
+  font-size: 30px;
   font-family: "Pacifico", cursive;
 }
 
@@ -174,8 +179,7 @@ main {
   height: 250px;
 }
 
-#reason hr,
-#about hr {
+hr {
   width: 20%;
   text-align: center;
   height: 3px;
@@ -188,6 +192,36 @@ main {
 #about h1 {
   padding-bottom: 0;
   margin-bottom: 0;
+}
+
+/* Benefit Styling */
+#benefits {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 60px;
+  background-color: white;
+}
+
+.box {
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  height: 400px;
+}
+
+.box-black {
+  background-color: rgb(82, 68, 68);
+  color: rgb(255, 255, 255);
+}
+
+.box-grey {
+  background-color: rgb(224, 224, 224);
+  color: black;
+}
+
+#benefits .box:not(:first-child) {
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
 /* Profile Styling */
