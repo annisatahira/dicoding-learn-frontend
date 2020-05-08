@@ -132,7 +132,7 @@ main {
 
 /* Reason Section */
 #reason {
-  background-color: rgb(54, 43, 43);
+  background-color: rgb(77, 63, 63);
   padding: 10px 120px;
   color: white;
   text-align: center;
@@ -150,7 +150,7 @@ main {
 #reason .card {
   width: 100%;
   height: 300px;
-  background-color: rgb(224, 224, 224);
+  background-color: rgb(243, 243, 243);
   color: black;
 }
 
@@ -190,6 +190,11 @@ hr {
   margin-bottom: 25px;
 }
 
+.hr-dashed hr {
+  border: 1px dashed rgb(247, 208, 180);
+  width: 100%;
+}
+
 #about h1 {
   padding-bottom: 0;
   margin-bottom: 0;
@@ -200,7 +205,8 @@ hr {
   width: 100%;
   margin: 0 auto;
   padding: 20px 60px;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(214, 214, 214);
+  padding-bottom: 50px;
 }
 
 .box {
@@ -215,7 +221,7 @@ hr {
 }
 
 .box-grey {
-  background-color: rgb(224, 224, 224);
+  background-color: rgb(253, 252, 252);
   color: black;
 }
 
@@ -240,12 +246,66 @@ hr {
 #variant img {
   width: 100px;
 }
+
+/* Product Styling */
+#product {
+  background-color: rgb(248, 248, 248);
+  padding: 20px;
+  line-height: 0.7;
+  color: black;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#product figure {
+  text-align: center;
+}
+
+#product img {
+  width: 100px;
+}
+
+#product li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* Summary Styling */
+#summary {
+  float: left;
+  width: 75%;
+}
+
+#summary .card {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  padding: 20px;
+}
+
 /* Profile Styling */
 
-/* aside {
+aside {
   float: right;
   width: 25%;
-  padding-left: 15px;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 aside a {
@@ -278,4 +338,13 @@ figure {
 
 .profile-bio h3 {
   padding-top: 10px;
-} */
+  text-align: left;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #353032;
+  text-align: center;
+  font-weight: bold;
+}
