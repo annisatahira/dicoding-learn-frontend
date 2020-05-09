@@ -15,6 +15,7 @@ span {
 h1,
 h3 {
   text-align: center;
+  text-transform: capitalize;
 }
 
 h1 {
@@ -39,7 +40,7 @@ br {
 
 .first {
   flex-grow: 1;
-  margin-top: 5px;
+  margin: auto;
 }
 
 .double {
@@ -60,9 +61,11 @@ header {
 
 nav {
   background-color: transparent;
-  padding: 5px;
-  position: absolute;
-  top: 10px;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  transition: 0.4s;
 }
 
 nav a {
@@ -75,6 +78,10 @@ nav a {
 nav a:hover,
 aside a:hover {
   font-weight: bold;
+  color: saddlebrown;
+}
+
+nav a:active {
   color: saddlebrown;
 }
 
@@ -180,19 +187,24 @@ main {
   height: 250px;
 }
 
+#about h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 hr {
   width: 20%;
-  text-align: center;
   height: 3px;
   border-width: 0;
   color: brown;
   background-color: brown;
   margin-bottom: 25px;
+  border-style: dashed;
 }
 
 .hr-dashed hr {
   border: 1px dashed rgb(247, 208, 180);
-  width: 100%;
+  width: 20%;
 }
 
 #about h1 {
@@ -248,7 +260,7 @@ hr {
 }
 
 /* Product Styling */
-#product {
+#products {
   background-color: rgb(248, 248, 248);
   padding: 20px;
   line-height: 0.7;
@@ -260,15 +272,15 @@ hr {
   text-align: center;
 }
 
-#product figure {
+#products figure {
   text-align: center;
 }
 
-#product img {
+#products img {
   width: 100px;
 }
 
-#product li {
+#products li {
   display: inline-block;
   list-style-type: none;
 }
@@ -295,10 +307,17 @@ td {
   border-bottom: 1px solid #ddd;
 }
 
+th {
+  border-top: 1px solid #ddd;
+}
+
 .container {
   padding: 20px;
 }
 
+.container hr {
+  width: 100%;
+}
 /* Profile Styling */
 
 aside {
