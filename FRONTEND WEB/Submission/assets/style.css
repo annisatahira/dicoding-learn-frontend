@@ -39,14 +39,14 @@ br {
 }
 
 .first {
-  flex-grow: 1;
   margin: auto;
+  width: 25%;
 }
 
 .double {
-  flex-grow: 2;
   margin-left: 50px;
   margin-top: 5px;
+  width: 75%;
 }
 
 /* Styling for header */
@@ -175,7 +175,7 @@ main {
   padding: 10px 120px;
   color: white;
   text-align: center;
-  height: 500px;
+  padding-bottom: 20px;
 }
 
 #reason img {
@@ -398,4 +398,68 @@ footer {
   background-color: #353032;
   text-align: center;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 798px) {
+  #summary,
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+
+  #about img {
+    display: none;
+  }
+
+  .flex-row {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  #about .double {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+  }
+
+  /* REASON */
+  #reason .card:first-child,
+  #variant .card:first-child {
+    margin-left: 25px;
+  }
+
+  #reason .card {
+    margin: 20px;
+    height: 300px;
+  }
+
+  /* VARIANTS */
+  #variant .card {
+    margin: 20px;
+  }
+
+  /* BENEFIT */
+
+  #benefits .box {
+    width: 100%;
+  }
+
+  #benefits .box:first-child {
+    margin-left: 5px;
+  }
+
+  /* Profile */
+  .dev img {
+    width: 300px;
+  }
+
+  aside .card {
+    width: 500px;
+    margin-bottom: 20px;
+  }
 }
