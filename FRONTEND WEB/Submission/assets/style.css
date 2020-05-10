@@ -75,13 +75,13 @@ nav a {
   color: white;
 }
 
+#menu {
+  display: none;
+}
+
 nav a:hover,
 aside a:hover {
   font-weight: bold;
-  color: saddlebrown;
-}
-
-nav a:active {
   color: saddlebrown;
 }
 
@@ -561,14 +561,33 @@ footer {
 
 /* NAV */
 @media screen and (max-width: 500px) {
-  nav ul {
-    margin: 0px;
-    padding: 0px;
+  nav {
+    padding: 10px;
+    background-color: black;
   }
 
-  nav li {
-    float: none;
+  nav ul {
+    padding-left: 0;
+  }
+  #menu {
     display: block;
+    padding: 0;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  #mobile-nav {
+    display: none;
+  }
+
+  #mobile-nav li {
+    display: list-item;
+    margin-left: 0;
     text-align: center;
+    color: white;
+  }
+
+  #menu a:hover {
+    color: white;
   }
 }

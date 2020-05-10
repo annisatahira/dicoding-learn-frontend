@@ -3,6 +3,11 @@
   <head>
     <title>Chocolate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
@@ -50,11 +55,20 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#variant">Variant</a></li>
-          <li><a href="#benefits">Benefits</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#summary">Summary</a></li>
+          <div id="menu">
+            <li>
+              <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </li>
+          </div>
+          <div id="mobile-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#variant">Variant</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#summary">Summary</a></li>
+          </div>
         </ul>
       </nav>
     </header>
@@ -95,8 +109,8 @@
                   <h2>How is <span>Chocolate's</span> Production?</h2>
 
                   <p>
-                    Cacao production is labor-intensive. Trees require hand
-                    harvesting and machetes, as the pods can reach a size
+                    <b>Cacao production</b> is labor-intensive. Trees require
+                    hand harvesting and machetes, as the pods can reach a size
                     comparable to butternut squash and hold between 30 and 50
                     beans. Cacao trees grown in the wild with shade can maintain
                     production for nearly 100 years. Take that, biennials.
