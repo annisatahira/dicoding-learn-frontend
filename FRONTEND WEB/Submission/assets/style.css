@@ -558,3 +558,17 @@ footer {
     margin-left: 25px;
   }
 }
+
+/* NAV */
+@media screen and (max-width: 500px) {
+  nav ul {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  nav li {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
