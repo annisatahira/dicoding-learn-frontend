@@ -187,13 +187,10 @@ main {
 }
 
 #reason .card {
-  width: 100%;
-  height: 300px;
   background-color: rgb(243, 243, 243);
   color: black;
 }
 
-#variant .card:not(:first-child),
 #reason .card:not(:first-child) {
   margin-left: 25px;
 }
@@ -213,10 +210,6 @@ main {
   margin: 0 auto;
   padding: 20px 90px;
   margin-bottom: 50px;
-}
-
-#about img {
-  height: 250px;
 }
 
 #about h2 {
@@ -282,7 +275,6 @@ hr {
 }
 
 #variant .card {
-  width: 300px;
   border-top-style: groove;
   border-color: saddlebrown;
 }
@@ -400,7 +392,9 @@ footer {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 798px) {
+/* FOR PHONE */
+
+@media only screen and (max-width: 789px) {
   #summary,
   #content,
   aside {
@@ -409,6 +403,7 @@ footer {
   }
 
   .container {
+    padding: 0;
     margin: 0 auto;
   }
 
@@ -421,26 +416,39 @@ footer {
     margin: 0 auto;
   }
 
+  /* ABOUT */
+
+  #about {
+    padding: 20px;
+  }
+
+  #about h2 {
+    text-align: left;
+  }
+
   #about .double {
     width: 100%;
-    padding: 20px;
+    padding: 5px;
     margin: auto;
   }
 
   /* REASON */
-  #reason .card:first-child,
-  #variant .card:first-child {
-    margin-left: 25px;
+  #reason,
+  #variant,
+  #benefits {
+    padding: 20px;
+    margin-bottom: 0;
   }
-
-  #reason .card {
-    margin: 20px;
-    height: 300px;
-  }
-
-  /* VARIANTS */
+  #reason .card,
   #variant .card {
-    margin: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #reason .card:not(:first-child),
+  #variant .card:not(:first-child) {
+    margin-left: -1px;
   }
 
   /* BENEFIT */
@@ -449,17 +457,84 @@ footer {
     width: 100%;
   }
 
-  #benefits .box:first-child {
-    margin-left: 5px;
+  #benefits .box:not(:first-child) {
+    margin-left: -1px;
+  }
+
+  /* PRODUCT */
+  #products ul {
+    padding-left: 0;
   }
 
   /* Profile */
   .dev img {
-    width: 300px;
+    width: 200px;
   }
 
   aside .card {
-    width: 500px;
     margin-bottom: 20px;
+  }
+
+  .profile-bio h3,
+  .profile-bio p {
+    text-align: center;
+  }
+}
+
+/* Desktop or Laptop */
+
+@media only screen and (min-width: 992px) {
+  /* ABOUT */
+  #about img {
+    height: 200px;
+  }
+
+  /* REASON */
+
+  #reason .card {
+    height: 350px;
+    margin-bottom: 40px;
+  }
+
+  /* VARIANT */
+
+  #variant .card {
+    margin-bottom: 20px;
+    width: 500px;
+    height: 100%;
+  }
+
+  #variant .flex-row {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  #variant .card:not(:first-child) {
+    margin-left: -1px;
+  }
+}
+
+/* EXTRA LARGE SCREEN */
+@media only screen and (min-width: 1200px) {
+  #about img {
+    height: 250px;
+  }
+
+  #reason .card {
+    width: 100%;
+    height: 300px;
+  }
+
+  #variant .flex-row {
+    flex-direction: row;
+  }
+
+  #variant .card {
+    width: 100%;
+    height: 550px;
+  }
+
+  #variant .card:not(:first-child) {
+    margin-left: 25px;
   }
 }
