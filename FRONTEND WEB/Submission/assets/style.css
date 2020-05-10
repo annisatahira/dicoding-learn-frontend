@@ -402,6 +402,26 @@ footer {
     padding: 0;
   }
 
+  .banner img {
+    width: 100%;
+    height: 480px;
+  }
+
+  .text-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .text-banner p {
+    line-height: 1.5;
+    font-size: 20px;
+  }
+  .text-banner em {
+    display: none;
+  }
+
   .container {
     padding: 0;
     margin: 0 auto;
