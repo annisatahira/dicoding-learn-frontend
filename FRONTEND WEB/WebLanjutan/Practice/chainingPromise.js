@@ -50,3 +50,15 @@ function reserveACoffee(type, miligrams) {
       console.log(RejectedReason);
     });
 }
+
+//use async /wait
+async function reserveACoffee(type, miligrams) {
+  try {
+    const seeds = await getSeeds(type, miligrams);
+    const coffe = await makeCoffee(seeds);
+    const result = await servingToTable(coffe);
+    console.log(result);
+  } catch (RejectedReason) {
+    console.log(RejectedReason);
+  }
+}
