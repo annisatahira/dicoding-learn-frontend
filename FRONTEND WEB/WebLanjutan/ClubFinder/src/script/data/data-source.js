@@ -1,4 +1,4 @@
-import clubs from "./clubs";
+import clubs from "./clubs.js";
 
 class DataSource {
   //memakai static agar bisa diakses secara langsung tanpa harus membuat instance

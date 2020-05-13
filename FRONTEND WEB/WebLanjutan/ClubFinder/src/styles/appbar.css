@@ -1,6 +1,6 @@
-.app-bar {
-  display: block;
+app-bar {
   padding: 16px;
+  display: block;
   width: 100%;
   background-color: cornflowerblue;
   color: white;
