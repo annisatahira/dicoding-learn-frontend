@@ -1,3 +1,5 @@
+import DataSource from "../data/data-source";
+
 const main = () => {
   const searchElement = document.querySelector("#searchElement");
   const buttonSearchElement = document.querySelector("#searchButtonElement");

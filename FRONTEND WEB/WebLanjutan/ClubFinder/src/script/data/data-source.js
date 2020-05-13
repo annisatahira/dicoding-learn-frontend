@@ -1,3 +1,5 @@
+import clubs from "./clubs";
+
 class DataSource {
   //memakai static agar bisa diakses secara langsung tanpa harus membuat instance
   static searchClub(keyword) {
@@ -14,3 +16,5 @@ class DataSource {
     });
   }
 }
+
+export default DataSource;
