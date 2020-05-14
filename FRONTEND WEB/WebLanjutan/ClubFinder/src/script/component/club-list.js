@@ -1,3 +1,5 @@
+import "./club-item.js";
+
 class ClubList extends HTMLElement {
   //untuk menerapkan property this._club
   set clubs(clubs) {
