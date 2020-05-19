@@ -75,11 +75,16 @@ header img {
 .overlay button {
   float: left;
   width: 10%;
-  padding: 15px;
+  padding: 10px;
   background: transparent;
   font-size: 17px;
   border: none;
   cursor: pointer;
+  outline: 0;
+}
+
+.overlay .fa {
+  color: #ef5350 !important;
 }
 
 .search-wrapper {
@@ -90,6 +95,7 @@ header img {
   border-radius: 20px;
   width: 40%;
   background: white;
+  outline: 0;
 }
 
 .search-wrapper input[type="text"] {
@@ -97,19 +103,10 @@ header img {
   font-size: 15px;
   border: none;
   float: left;
-  width: 80%;
+  width: 90%;
   background: transparent;
   border-radius: 20px 0px 0px 20px;
-}
-
-.search-wrapper input[type="text"] {
-  padding: 15px;
-  font-size: 15px;
-  border: none;
-  float: left;
-  width: 80%;
-  background: transparent;
-  border-radius: 20px 0px 0px 20px;
+  outline: 0;
 }
 
 .search-wrapper input[type="text"]:hover {
@@ -118,16 +115,18 @@ header img {
 
 .search-wrapper button {
   float: left;
-  width: 20%;
-  padding: 15px;
-  background: transparent;
+  width: 10%;
+  padding: 14px;
+  background: #ef5350;
   font-size: 17px;
   border: none;
   cursor: pointer;
+  border-radius: 20px 20px 20px 20px;
+  outline: 0;
 }
 
-.fa {
-  color: #ef5350 !important;
+.search-wrapper .fa {
+  color: white !important;
 }
 
 .logo {
@@ -144,7 +143,7 @@ header img {
 
 .text-banner {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
