@@ -10,6 +10,17 @@ class AppBar extends HTMLElement {
   render() {
     this.innerHTML = `
       <style>
+      .logo {
+        color: white;
+        font-weight: bolder;
+        font-family: "Pacifico", cursive;
+        font-size: 25px;
+        padding: 20px;
+        background: #ef5350;
+        text-decoration: none;
+        position: absolute;
+        margin-left: 30px;
+      }
       .search-wrapper {
         position: absolute;
         top: 25px;
@@ -20,7 +31,6 @@ class AppBar extends HTMLElement {
         background: white;
         outline: 0;
       }
-      
       .search-wrapper input[type="text"] {
         padding: 15px;
         font-size: 15px;
@@ -50,18 +60,6 @@ class AppBar extends HTMLElement {
       
       .search-wrapper .fa {
         color: white !important;
-      }
-      
-      .logo {
-        color: white;
-        font-weight: bolder;
-        font-family: "Pacifico", cursive;
-        font-size: 25px;
-        padding: 20px;
-        background: #ef5350;
-        text-decoration: none;
-        position: absolute;
-        margin-left: 30px;
       }
       </style>
       <a href="#" class="logo">COOKA</a>
