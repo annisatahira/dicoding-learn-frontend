@@ -74,4 +74,6 @@ class AppBar extends HTMLElement {
   }
 }
 
+//for export
+
 customElements.define("app-bar", AppBar);
