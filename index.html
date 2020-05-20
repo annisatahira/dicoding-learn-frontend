@@ -10,14 +10,14 @@
     />
 
     <link rel="stylesheet" href="./src/style/style.css" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="node_modules/materialize-css/dist/css/materialize.min.css"
-    />
+    /> -->
   </head>
   <body>
     <header>
-      <div id="searchOverlay" class="overlay">
+      <!-- <div id="searchOverlay" class="overlay">
         <span class="closebtn" onclick="closeSearch()">×</span>
         <div class="overlay-content">
           <form action="/action_page.php">
@@ -25,9 +25,9 @@
             <button type="submit"><i class="fa fa-search"></i></button>
           </form>
         </div>
-      </div>
+      </div> -->
       <app-bar>
-        <a href="#" class="logo">COOKA</a>
+        <!-- <a href="#" class="logo">COOKA</a>
         <div class="search-wrapper">
           <input
             type="text"
@@ -35,9 +35,10 @@
             placeholder="Search All Recipe You Want"
           />
           <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
+        </div> -->
       </app-bar>
-      <img src="src/images/bg02.jpg" alt="food wallpaper" />
+      <banner-slider></banner-slider>
+      <!-- <img src="src/images/bg02.jpg" alt="food wallpaper" />
       <div class="text-banner">
         <h1>Quick Learn</h1>
         <p>
@@ -45,11 +46,13 @@
           <br />
           cooka using API that provide you a step-by-step how to cook it.
         </p>
-      </div>
+      </div> -->
     </header>
     <main></main>
     <footer></footer>
-    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
-    <script src="src/script/main.js"></script>
+    <!-- <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script> -->
+    <!-- <script src="src/script/main.js"></script> -->
+    <script src="src/script/component/app-bar.js"></script>
+    <script src="src/script/component/banner-slider.js"></script>
   </body>
 </html>
