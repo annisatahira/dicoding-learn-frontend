@@ -5,6 +5,10 @@ banner-slider {
 
 banner-item {
   display: block;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 banner-item > img {
@@ -29,4 +33,29 @@ p {
 banner-item > .text-banner h1 {
   font-size: 45px;
   color: #ef5350;
+}
+
+banner-item > .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes banner-item {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
