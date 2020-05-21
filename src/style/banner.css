@@ -1,0 +1,28 @@
+banner-item {
+  display: block;
+}
+
+banner-item > img {
+  width: 100%;
+  max-height: 720px;
+  object-fit: cover;
+  object-position: center;
+}
+
+banner-item > .text-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+banner-item > .text-banner h1,
+p {
+  text-align: center;
+  font-size: 18px;
+}
+
+banner-item > .text-banner h1 {
+  font-size: 45px;
+  color: #ef5350;
+}
