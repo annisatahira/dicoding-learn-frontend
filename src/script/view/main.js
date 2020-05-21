@@ -19,7 +19,7 @@ const main = () => {
       slideIndex = 1;
     }
     bannerElement[slideIndex - 1].style.display = "block";
-    setTimeout(renderSlider, 7000); // Change image every 7 seconds
+    setTimeout(renderSlider, 5000); // Change image every 5 seconds
   };
 
   renderSlider();

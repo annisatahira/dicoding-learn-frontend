@@ -1,3 +1,16 @@
+.logo {
+  color: white;
+  font-weight: bolder;
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+  padding: 20px;
+  background: #ef5350;
+  text-decoration: none;
+  position: absolute;
+  margin-left: 30px;
+  top: 0px;
+}
+
 .search-wrapper {
   position: absolute;
   top: 25px;
@@ -38,16 +51,4 @@
 
 .search-wrapper .fa {
   color: white !important;
-}
-
-.logo {
-  color: white;
-  font-weight: bolder;
-  font-family: "Pacifico", cursive;
-  font-size: 25px;
-  padding: 20px;
-  background: #ef5350;
-  text-decoration: none;
-  position: absolute;
-  margin-left: 30px;
 }

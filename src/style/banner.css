@@ -35,14 +35,7 @@ banner-item > .text-banner h1 {
   color: #ef5350;
 }
 
-banner-item > .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes banner-item {
+@-webkit-keyframes fade {
   from {
     opacity: 0.4;
   }
