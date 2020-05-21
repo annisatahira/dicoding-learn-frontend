@@ -1,11 +1,11 @@
 import "../component/banner-item.js";
-import banner from "../data/banner.js";
+import banners from "../data/banners.js";
 
 const main = () => {
-  const containerElement = document.querySelector(".container");
+  const containerElement = document.querySelector("banner-slider");
 
   const bannerItemElement = document.createElement("banner-item");
-  bannerItemElement.banner = banner;
+  bannerItemElement.banner = banners;
 
   containerElement.appendChild(bannerItemElement);
 };
