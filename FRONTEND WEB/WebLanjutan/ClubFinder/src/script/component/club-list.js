@@ -30,7 +30,7 @@ class ClubList extends HTMLElement {
 
   render() {
     this.shadowDOM.innerHTML = "";
-    this._clubs.forEach((club) => {
+    this._clubs.forEach(club => {
       const clubItemELement = document.createElement("club-item");
       clubItemELement.club = club;
       this.shadowDOM.appendChild(clubItemELement);
