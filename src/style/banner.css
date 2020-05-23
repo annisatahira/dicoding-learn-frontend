@@ -1,10 +1,10 @@
 banner-slider {
   display: block;
-  max-height: 720px;
 }
 
 banner-item {
   display: block;
+  position: relative;
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
@@ -12,25 +12,26 @@ banner-item {
 }
 
 banner-item > img {
+  max-height: 720px;
   width: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-banner-item > .text-banner {
+.text-banner {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-banner-item > .text-banner h1,
+.text-banner h1,
 p {
   text-align: center;
   font-size: 18px;
 }
 
-banner-item > .text-banner h1 {
+.text-banner h1 {
   font-size: 45px;
   color: #ef5350;
 }

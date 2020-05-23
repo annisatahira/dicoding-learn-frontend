@@ -11,7 +11,15 @@ const banners = [
     id: 2,
     title: "Bismillah",
     bannerImage:
-      "http://3.bp.blogspot.com/-IwHSiur4n5Y/WHsI8Ye7t1I/AAAAAAAAB08/RnaclzV-HrQ01aHcCEDkQ5j97cyhjt2hQCHM/s1600/nice-hd-wallpapers-collection-44-of-free-pizza-best-pictures.jpg",
+      "https://www.foodiesfeed.com/wp-content/uploads/2019/05/red-fruit-and-vegetables-on-a-white-background-3.jpg",
+    description:
+      "Lor but also the leap into electronic typesetting, remaining essentially unchanged. raset sheets containing Lorem Ipsum passages, and more ."
+  },
+  {
+    id: 2,
+    title: "Morning Coffe",
+    bannerImage:
+      "https://www.foodiesfeed.com/wp-content/uploads/2016/07/red-fruit-and-vegetables-from-above.jpg",
     description:
       "Lor but also the leap into electronic typesetting, remaining essentially unchanged. raset sheets containing Lorem Ipsum passages, and more ."
   }
