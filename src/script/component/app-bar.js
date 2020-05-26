@@ -9,6 +9,7 @@ class AppBar extends HTMLElement {
   }
 
   render() {
+    const styles = document.querySelector('link[href*="fontawesome"]');
     this.shadowDOM.innerHTML = `
     <style>
       * {
@@ -80,6 +81,9 @@ class AppBar extends HTMLElement {
         />
         <button type="submit"><i class="fa fa-search"></i></button>
       </div>`;
+    if (styles) {
+      this.shadowRoot.appendChild(styles.cloneNode());
+    }
   }
 }
 
