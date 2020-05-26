@@ -1,6 +1,7 @@
 import "../component/container/banner-slider.js";
 import "../component/container/category-list.js";
 import banners from "../data/data-banners.js";
+import categories from "../data/data-category.js";
 
 const main = () => {
   let slideIndex = 0;
@@ -9,7 +10,7 @@ const main = () => {
   const categoryListElement = document.querySelector("category-list");
   //memanggil setter banners() pada pada banner slider
   bannerSliderElement.banners = banners;
-  categoryListElement.categories = banners;
+  categoryListElement.categories = categories;
 
   const renderSlider = () => {
     const bannerElement = document.querySelectorAll("banner-item");
