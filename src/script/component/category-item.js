@@ -7,7 +7,7 @@ class CategoryItem extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        <div class="col s12 m6 l3">
+        <div class="col s12 m12 l2">
           <figure>
           <img src=${this._category.bannerImage} alt="food category" />
           <figcaption>${this._category.title}</figcaption>
