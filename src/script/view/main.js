@@ -1,7 +1,6 @@
 import "../component/container/banner-slider.js";
 import "../component/container/category-list.js";
-import banners from "../data/data-banners.js";
-import categories from "../data/data-category.js";
+import banners from "../data/data-banner.js";
 
 const main = () => {
   const baseUrl = "https://www.themealdb.com/api/json/v1/1";
@@ -24,9 +23,9 @@ const main = () => {
     const categoryListElement = document.querySelector("category-list");
     categoryListElement.categories = categories;
 
-    //show 8 category
     const categoryItem = document.querySelectorAll("category-item");
 
+    //show 8 category
     for (let i = 0; i < categoryItem.length; i++) {
       categoryItem[i].style.display = "none";
     }
