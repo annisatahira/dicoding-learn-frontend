@@ -23,6 +23,16 @@ const main = () => {
   const renderAllCategoryMeals = categories => {
     const categoryListElement = document.querySelector("category-list");
     categoryListElement.categories = categories;
+
+    //show 8 category
+    const categoryItem = document.querySelectorAll("category-item");
+
+    for (let i = 0; i < categoryItem.length; i++) {
+      categoryItem[i].style.display = "none";
+    }
+    for (let i = 0; i < 8; i++) {
+      categoryItem[i].style.display = "block";
+    }
   };
 
   const showResponeMessage = (message = "Check Your Connection") => {
