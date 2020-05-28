@@ -85,13 +85,12 @@ header {
 } */
 
 main {
-  padding: 0;
+  padding: 30px 90px;
   margin: 0;
 }
 
 main h1 {
-  font-weight: bold;
-  color: rgb(72, 147, 197);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
   padding: 20px;
 }
@@ -100,15 +99,28 @@ figure {
   padding: 0;
   margin: 0 !important;
   display: block;
+  text-align: center;
 }
 
 figure img {
-  height: 100px;
+  height: 110px;
 }
 
 figcaption {
   font-size: 25px;
-  color: cadetblue;
-  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
+  color: teal;
   text-align: center;
+}
+
+.card-image img {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+p {
+  text-align: left;
+  line-height: 1.5em;
 }

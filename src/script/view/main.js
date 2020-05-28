@@ -29,7 +29,7 @@ const main = () => {
     for (let i = 0; i < categoryItem.length; i++) {
       categoryItem[i].style.display = "none";
     }
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 6; i++) {
       categoryItem[i].style.display = "block";
     }
   };
@@ -58,6 +58,11 @@ const main = () => {
     bannerElement[slideIndex - 1].style.display = "block";
     setTimeout(renderSlider, 5000); // Change image every 5 seconds
   };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var elems = document.querySelectorAll(".carousel");
+    var instances = M.Carousel.init(elems, options);
+  });
 
   renderSlider();
   getCategoryMeal();
