@@ -59,11 +59,6 @@ const main = () => {
     setTimeout(renderSlider, 5000); // Change image every 5 seconds
   };
 
-  document.addEventListener("DOMContentLoaded", function() {
-    var elems = document.querySelectorAll(".carousel");
-    var instances = M.Carousel.init(elems, options);
-  });
-
   renderSlider();
   getCategoryMeal();
 };
