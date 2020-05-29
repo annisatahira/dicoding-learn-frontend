@@ -7,6 +7,7 @@ class CategoryList extends HTMLElement {
   }
 
   render() {
+    this.innerHTML = "";
     this._categories.forEach(category => {
       const categoryItemElement = document.createElement("category-item");
       categoryItemElement.category = category;

@@ -124,3 +124,7 @@ p {
   text-align: left;
   line-height: 1.5em;
 }
+/* category-list {
+  display: flex;
+  flex-direction: row;
+} */
