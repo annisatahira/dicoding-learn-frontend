@@ -23,15 +23,32 @@ const main = () => {
     const categoryListElement = document.querySelector("category-list");
     categoryListElement.categories = categories;
 
-    const categoryItem = document.querySelectorAll("category-item");
-
-    //show 8 category
-    for (let i = 0; i < categoryItem.length; i++) {
-      categoryItem[i].style.display = "none";
-    }
-    for (let i = 0; i < 6; i++) {
-      categoryItem[i].style.display = "block";
-    }
+    $("category-list").slick({
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      arrows: true,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 5
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
   };
 
   const showResponeMessage = (message = "Check Your Connection") => {
@@ -43,13 +60,14 @@ const main = () => {
   //memanggil setter banners() pada pada banner slider
   bannerSliderElement.banners = banners;
 
-  $(".single-item").slick({
+  $("banner-slider").slick({
     dots: true,
     fade: true,
     cssEase: "linear",
     autoplay: true,
     autoplaySpeed: 2000
   });
+
   getCategoryMeal();
 };
 

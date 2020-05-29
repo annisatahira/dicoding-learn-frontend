@@ -97,13 +97,14 @@ main h1 {
 
 figure {
   padding: 0;
-  margin: 0 !important;
   display: block;
   text-align: center;
+  margin: 0 auto;
 }
 
 figure img {
-  height: 110px;
+  height: 100px;
+  object-position: center;
 }
 
 figcaption {
@@ -124,7 +125,8 @@ p {
   text-align: left;
   line-height: 1.5em;
 }
-/* category-list {
-  display: flex;
-  flex-direction: row;
-} */
+
+.slick-next:before,
+.slick-prev:before {
+  color: #ef5350 !important;
+}
