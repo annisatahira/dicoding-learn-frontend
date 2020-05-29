@@ -1,9 +1,13 @@
 import "../component/container/banner-slider.js";
 import "../component/container/category-list.js";
-import banners from "../data/data-banner.js";
+import "../component/text-item.js";
+import { banners, about } from "../data/data-banner.js";
 
 const main = () => {
   const baseUrl = "https://www.themealdb.com/api/json/v1/1";
+
+  const textElement = document.querySelector("text-item");
+  textElement.text = about;
 
   const getCategoryMeal = async () => {
     try {
@@ -56,8 +60,6 @@ const main = () => {
   };
 
   const bannerSliderElement = document.querySelector("banner-slider");
-
-  //memanggil setter banners() pada pada banner slider
   bannerSliderElement.banners = banners;
 
   $("banner-slider").slick({
@@ -65,7 +67,8 @@ const main = () => {
     fade: true,
     cssEase: "linear",
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    arrows: false
   });
 
   getCategoryMeal();
