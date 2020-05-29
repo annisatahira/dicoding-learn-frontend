@@ -71,6 +71,18 @@ const main = () => {
     arrows: false
   });
 
+  $(".long-p").hide();
+
+  $(".show").click(function() {
+    $(".long-p").show();
+    $(".show").hide();
+  });
+
+  $(".min-content").click(function() {
+    $(".long-p").hide();
+    $(".show").show();
+  });
+
   getCategoryMeal();
 };
 
