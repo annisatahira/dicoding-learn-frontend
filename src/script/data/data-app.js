@@ -70,4 +70,127 @@ const learns = [
       "https://static.vecteezy.com/system/resources/previews/000/341/562/non_2x/happy-woman-chef-cooking-vector-character-illustration.png"
   }
 ];
-export { banners, about, learns };
+
+const meals = [
+  {
+    strArea: "American",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "British",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Canadian",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Chinese",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Dutch",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Egyptian",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "French",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Greek",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Indian",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Irish",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Italian",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Jamaican",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Japanese",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Kenyan",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Malaysian",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Mexican",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Moroccan",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Russian",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Spanish",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Thai",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Tunisian",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Turkish",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Unknown",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  },
+  {
+    strArea: "Vietnamese",
+    imgArea:
+      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+  }
+];
+export { banners, about, learns, meals };

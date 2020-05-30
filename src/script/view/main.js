@@ -2,7 +2,8 @@ import "../component/container/banner-slider.js";
 import "../component/container/category-list.js";
 import "../component/container/text-list.js";
 import "../component/container/learn-list.js";
-import { banners, about, learns } from "../data/data-app.js";
+import "../component/container/area-list.js";
+import { banners, about, learns, meals } from "../data/data-app.js";
 
 const main = () => {
   const baseUrl = "https://www.themealdb.com/api/json/v1/1";
@@ -115,6 +116,9 @@ const main = () => {
 
   const learnListElement = document.querySelector("learn-list");
   learnListElement.learns = learns;
+
+  const areaListElement = document.querySelector("area-list");
+  areaListElement.meals = meals;
 
   getCategoryMeal();
   getIngredientsCategory();
