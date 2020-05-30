@@ -12,6 +12,9 @@ class TextList extends HTMLElement {
       textItemElement.text = text;
       this.appendChild(textItemElement);
     });
+    const more = document.createElement("div");
+    more.innerHTML = '<a class="show-more">Show more</a>';
+    this.appendChild(more);
   }
 }
 

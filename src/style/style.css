@@ -130,3 +130,8 @@ p {
 .slick-prev:before {
   color: #ef5350 !important;
 }
+
+.show-more {
+  display: none;
+  cursor: pointer;
+}

@@ -6,8 +6,8 @@ import { banners, about } from "../data/data-app.js";
 const main = () => {
   const baseUrl = "https://www.themealdb.com/api/json/v1/1";
 
-  const textElement = document.querySelector("text-list");
-  textElement.texts = about;
+  const textListElement = document.querySelector("text-list");
+  textListElement.texts = about;
 
   const getCategoryMeal = async () => {
     try {
@@ -71,16 +71,18 @@ const main = () => {
     arrows: false
   });
 
-  $(".long-p").hide();
+  if ($("text-item").length > 2) {
+    $("text-item:gt(0)").hide();
+    $(".show-more").show();
+  }
 
-  $(".show").click(function() {
-    $(".long-p").show();
-    $(".show").hide();
-  });
-
-  $(".min-content").click(function() {
-    $(".long-p").hide();
-    $(".show").show();
+  $(".show-more").on("click", function() {
+    //toggle elements with class text-item that their index is bigger than 2
+    $("text-item:gt(0)").toggle();
+    //change text of show more element just for demonstration purposes to this demo
+    $(this).text() === "Show more"
+      ? $(this).text("Show less")
+      : $(this).text("Show more");
   });
 
   getCategoryMeal();
