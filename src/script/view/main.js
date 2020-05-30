@@ -11,29 +11,19 @@ const main = () => {
     try {
       const response = await fetch(`${baseUrl}/categories.php`);
       const responseJson = await response.json();
-      if (responseJson.error) {
-        showResponeMessage(responseJson.message);
-      } else {
-        renderAllCategoryMeals(responseJson.categories);
-      }
-    } catch (error) {
-      showResponeMessage(error);
+      renderAllCategoryMeals(responseJson.categories);
+    } catch (message) {
+      showResponeMessage(message);
     }
   };
 
   const getIngredientsCategory = async () => {
     try {
-      const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/list.php?i=list`
-      );
+      const response = await fetch(`${baseUrl}/list.php?i=list`);
       const responseJson = await response.json();
-      if (responseJson.error) {
-        showResponeMessage(responseJson.message);
-      } else {
-        renderIngredients(responseJson.meals);
-      }
-    } catch (error) {
-      showResponeMessage(error);
+      renderIngredients(responseJson.meals);
+    } catch (message) {
+      showResponeMessage(message);
     }
   };
 
@@ -71,7 +61,7 @@ const main = () => {
 
   const renderIngredients = meals => {
     const ingredientListElement = document.querySelector("#ingredientList");
-    ingredientListElement.innerHTML = "";
+    ingredientListElement.innerHTML = "<h1>Ingredients Category</h1>";
 
     meals.forEach(meal => {
       ingredientListElement.innerHTML += `
@@ -117,9 +107,7 @@ const main = () => {
   }
 
   $(".show-more").on("click", function() {
-    //toggle elements with class text-item that their index is bigger than 2
     $("text-item:gt(0)").toggle();
-    //change text of show more element just for demonstration purposes to this demo
     $(this).text() === "Show more"
       ? $(this).text("Show less")
       : $(this).text("Show more");
