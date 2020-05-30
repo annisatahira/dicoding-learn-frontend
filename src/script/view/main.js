@@ -1,13 +1,13 @@
 import "../component/container/banner-slider.js";
 import "../component/container/category-list.js";
-import "../component/text-item.js";
-import { banners, about } from "../data/data-banner.js";
+import "../component/container/text-list.js";
+import { banners, about } from "../data/data-app.js";
 
 const main = () => {
   const baseUrl = "https://www.themealdb.com/api/json/v1/1";
 
-  const textElement = document.querySelector("text-item");
-  textElement.text = about;
+  const textElement = document.querySelector("text-list");
+  textElement.texts = about;
 
   const getCategoryMeal = async () => {
     try {
