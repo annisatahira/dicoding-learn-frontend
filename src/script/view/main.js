@@ -1,8 +1,8 @@
 import "../component/container/banner-slider.js";
 import "../component/container/category-list.js";
 import "../component/container/text-list.js";
-import "../component/learn-item.js";
-import { banners, about, learn } from "../data/data-app.js";
+import "../component/container/learn-list.js";
+import { banners, about, learns } from "../data/data-app.js";
 
 const main = () => {
   const baseUrl = "https://www.themealdb.com/api/json/v1/1";
@@ -86,12 +86,8 @@ const main = () => {
       : $(this).text("Show more");
   });
 
-  const containerEl = document.querySelector("#learn");
-
-  const learnItem = document.createElement("learn-item");
-  learnItem.learn = learn;
-
-  containerEl.appendChild(learnItem);
+  const learnListElement = document.querySelector("learn-list");
+  learnListElement.learns = learns;
 
   getCategoryMeal();
 };

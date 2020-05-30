@@ -58,14 +58,16 @@ const about = [
   }
 ];
 
-const learn = {
-  title: "hiiii",
-  bgImg:
-    "https://static.vecteezy.com/system/resources/previews/000/341/578/non_2x/professional-chef-cooking-vector-character-illustration.png"
-};
-// {
-//   title: "2",
-//   bgImg:
-//     "https://static.vecteezy.com/system/resources/previews/000/341/562/non_2x/happy-woman-chef-cooking-vector-character-illustration.png"
-// }
-export { banners, about, learn };
+const learns = [
+  {
+    title: "hiiii",
+    bgImg:
+      "https://static.vecteezy.com/system/resources/previews/000/341/578/non_2x/professional-chef-cooking-vector-character-illustration.png"
+  },
+  {
+    title: "2",
+    bgImg:
+      "https://static.vecteezy.com/system/resources/previews/000/341/562/non_2x/happy-woman-chef-cooking-vector-character-illustration.png"
+  }
+];
+export { banners, about, learns };
