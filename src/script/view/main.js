@@ -21,6 +21,22 @@ const main = () => {
     }
   };
 
+  const getIngredientsCategory = async () => {
+    try {
+      const response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/list.php?i=list`
+      );
+      const responseJson = await response.json();
+      if (responseJson.error) {
+        showResponeMessage(responseJson.message);
+      } else {
+        renderIngredients(responseJson.meals);
+      }
+    } catch (error) {
+      showResponeMessage(error);
+    }
+  };
+
   const renderAllCategoryMeals = categories => {
     const categoryListElement = document.querySelector("category-list");
     categoryListElement.categories = categories;
@@ -51,6 +67,29 @@ const main = () => {
         }
       ]
     });
+  };
+
+  const renderIngredients = meals => {
+    const ingredientListElement = document.querySelector("#ingredientList");
+    ingredientListElement.innerHTML = "";
+
+    meals.forEach(meal => {
+      ingredientListElement.innerHTML += `
+      <div id="ingredientItem" class="col s12 m4 l3">
+        <p>${meal.strIngredient}</p>
+      </div>
+      `;
+    });
+
+    const ingredientItemElement = document.querySelectorAll("#ingredientItem");
+
+    for (let i = 0; i < ingredientItemElement.length; i++) {
+      ingredientItemElement[i].style.display = "none";
+    }
+
+    for (let i = 0; i < 40; i++) {
+      ingredientItemElement[i].style.display = "block";
+    }
   };
 
   const showResponeMessage = (message = "Check Your Connection") => {
@@ -90,6 +129,7 @@ const main = () => {
   learnListElement.learns = learns;
 
   getCategoryMeal();
+  getIngredientsCategory();
 };
 
 export default main;
