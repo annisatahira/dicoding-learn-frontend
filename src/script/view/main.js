@@ -1,13 +1,11 @@
 import "../component/container/banner-slider.js";
 import "../component/container/category-list.js";
 import "../component/container/text-list.js";
-import { banners, about } from "../data/data-app.js";
+import "../component/learn-item.js";
+import { banners, about, learn } from "../data/data-app.js";
 
 const main = () => {
   const baseUrl = "https://www.themealdb.com/api/json/v1/1";
-
-  const textListElement = document.querySelector("text-list");
-  textListElement.texts = about;
 
   const getCategoryMeal = async () => {
     try {
@@ -28,7 +26,7 @@ const main = () => {
     categoryListElement.categories = categories;
 
     $("category-list").slick({
-      slidesToShow: 5,
+      slidesToShow: 6,
       slidesToScroll: 1,
       arrows: true,
       infinite: false,
@@ -71,6 +69,9 @@ const main = () => {
     arrows: false
   });
 
+  const textListElement = document.querySelector("text-list");
+  textListElement.texts = about;
+
   if ($("text-item").length > 2) {
     $("text-item:gt(0)").hide();
     $(".show-more").show();
@@ -84,6 +85,13 @@ const main = () => {
       ? $(this).text("Show less")
       : $(this).text("Show more");
   });
+
+  const containerEl = document.querySelector("#learn");
+
+  const learnItem = document.createElement("learn-item");
+  learnItem.learn = learn;
+
+  containerEl.appendChild(learnItem);
 
   getCategoryMeal();
 };
