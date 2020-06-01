@@ -71,7 +71,78 @@ class AppBar extends HTMLElement {
       .search-wrapper .fa {
         color: white !important;
       }
+
+      .overlay {
+        height: 20%;
+        width: 100%;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+      }
+      
+      .overlay-content {
+        position: relative;
+        top: 40%;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+      }
+      
+      .overlay .closebtn {
+        position: absolute;
+        top: 5px;
+        right: 25px;
+        font-size: 40px;
+        cursor: pointer;
+        color: black;
+      }
+      
+      .overlay .closebtn:hover {
+        color: #ef5350;
+      }
+      
+      .overlay input[type="text"] {
+        padding: 15px;
+        font-size: 17px;
+        float: left;
+        width: 90%;
+        background: white;
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: #ddd;
+      }
+      
+      .overlay input[type="text"]:focus {
+        border-color: #ef5350;
+      }
+      
+      .overlay button {
+        float: left;
+        width: 10%;
+        padding: 10px;
+        background: transparent;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+        outline: 0;
+      }
+      
+      .overlay .fa {
+        color: #ef5350 !important;
+      }
     </style>
+    <div id="searchOverlay" class="overlay">
+      <span class="closebtn" onclick="closeSearch()">×</span>
+        <div class="overlay-content">
+          <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
       <a href="#" class="logo">COOKA</a>
       <div class="search-wrapper">
         <input

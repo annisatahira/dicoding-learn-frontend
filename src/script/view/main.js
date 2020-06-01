@@ -229,12 +229,18 @@ const main = () => {
     $(".pagination li.active a").trigger("click");
   });
 
+  const TestimoniTitle = document.querySelector("#testimoniTitle");
+  const tTitle = document.createElement("h1");
+  tTitle.innerHTML = `Testimonials`;
+  TestimoniTitle.appendChild(tTitle);
+
   const testimoniList = new List(
     "#testimoniList",
     "testimoni-item",
-    "",
+    "Testimoni",
     testimonials
   );
+
   testimoniList.renderItems();
 
   $("#testimoniList").slick({

@@ -2,12 +2,17 @@
   text-align: center;
   margin: 0 auto;
   padding: 0;
-  width: 500px;
+  width: 80%;
+}
+
+#testimoni #testimoniTitle {
+  text-align: center;
 }
 
 testimoni-item {
   width: 800px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 testimoni-item img {
@@ -15,6 +20,7 @@ testimoni-item img {
   border-radius: 50%;
   width: 150px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 testimoni-item p {
