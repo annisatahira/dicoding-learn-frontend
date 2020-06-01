@@ -77,12 +77,6 @@ const learns = [
   }
 ];
 
-const tes = {
-  title: "hiiii",
-  bgImg:
-    "https://static.vecteezy.com/system/resources/previews/000/341/578/non_2x/professional-chef-cooking-vector-character-illustration.png"
-};
-
 const meals = [
   {
     strArea: "American",
@@ -205,4 +199,4 @@ const meals = [
       "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
   }
 ];
-export { banners, about, learns, meals, tes };
+export { banners, about, learns, meals };

@@ -1,5 +1,5 @@
 class LearnItem extends HTMLElement {
-  set learn(item) {
+  set item(item) {
     this._item = item;
     this.render();
   }

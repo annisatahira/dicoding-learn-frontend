@@ -1,5 +1,5 @@
 class TextItem extends HTMLElement {
-  set text(text) {
+  set item(text) {
     this._text = text;
     this.render();
   }
