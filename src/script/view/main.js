@@ -1,5 +1,5 @@
-import "../component/container/banner-slider.js";
 import "../component/container/category-list.js";
+import "../component/banner-item.js";
 import "../component/text-item.js";
 import "../component/learn-item.js";
 import "../component/area-item.js";
@@ -88,10 +88,10 @@ const main = () => {
     alert(message);
   };
 
-  const bannerSliderElement = document.querySelector("banner-slider");
-  bannerSliderElement.banners = banners;
+  const bannerList = new List("#banner", "banner-item", "", banners);
+  bannerList.renderItems();
 
-  $("banner-slider").slick({
+  $("#banner").slick({
     dots: true,
     fade: true,
     cssEase: "linear",

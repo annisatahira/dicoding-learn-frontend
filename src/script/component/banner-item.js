@@ -1,5 +1,5 @@
 class BannerItem extends HTMLElement {
-  set banner(banner) {
+  set item(banner) {
     this._banner = banner;
     this.render();
   }
