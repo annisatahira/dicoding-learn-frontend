@@ -1,8 +1,8 @@
 import "../component/container/banner-slider.js";
 import "../component/container/category-list.js";
-import "../component/container/text-list.js";
+import "../component/text-item.js";
 import "../component/learn-item.js";
-import "../component/container/area-list.js";
+import "../component/area-item.js";
 import { banners, about, learns, meals } from "../data/data-app.js";
 import List from "../component/container/list.js";
 
@@ -120,8 +120,9 @@ const main = () => {
   learnList.renderTitle();
   learnList.renderItems();
 
-  const areaListElement = document.querySelector("area-list");
-  areaListElement.meals = meals;
+  const areaList = new List("#areaList", "area-item", "Area Categories", meals);
+  areaList.renderTitle();
+  areaList.renderItems();
 
   $(function() {
     //

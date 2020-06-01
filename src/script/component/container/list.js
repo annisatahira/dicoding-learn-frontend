@@ -18,7 +18,6 @@ class List {
     this.data.forEach(item => {
       const dataElement = document.createElement(this.listElement);
       dataElement.item = item;
-      console.log(dataElement);
       this.selector.appendChild(dataElement);
     });
   }

@@ -1,5 +1,5 @@
 class AreaItem extends HTMLElement {
-  set meal(meal) {
+  set item(meal) {
     this._meal = meal;
     this.render();
   }
