@@ -1,0 +1,18 @@
+figure {
+  padding: 0;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+figure img {
+  height: 100px;
+  object-position: center;
+}
+
+figcaption {
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
+  text-align: center;
+}

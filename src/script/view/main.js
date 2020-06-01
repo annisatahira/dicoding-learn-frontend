@@ -3,13 +3,15 @@ import "../component/banner-item.js";
 import "../component/text-item.js";
 import "../component/learn-item.js";
 import "../component/area-item.js";
+import "../component/video-item.js";
 import "../component/testimoni-item.js";
 import {
   banners,
   about,
   learns,
   meals,
-  testimonials
+  testimonials,
+  videos
 } from "../data/data-app.js";
 import List from "../component/container/list.js";
 
@@ -244,7 +246,15 @@ const main = () => {
     arrows: true
   });
 
-  //using class List
+  const videoList = new List(
+    "#videoList",
+    "video-item",
+    "Cooking Video",
+    videos
+  );
+  videoList.renderTitle();
+  videoList.renderItems();
+
   getCategoryMeal();
   getIngredientsCategory();
 };

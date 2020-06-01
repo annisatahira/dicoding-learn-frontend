@@ -3,6 +3,7 @@
 
 @import "appbar.css";
 @import "banner.css";
+@import "category.css";
 @import "testimoni.css";
 
 body {
@@ -96,26 +97,6 @@ main h1 {
   padding: 20px;
 }
 
-figure {
-  padding: 0;
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-}
-
-figure img {
-  height: 100px;
-  object-position: center;
-}
-
-figcaption {
-  font-size: 25px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: lighter;
-  color: teal;
-  text-align: center;
-}
-
 .card-image img {
   height: 200px;
   object-fit: cover;
@@ -152,20 +133,11 @@ p {
   font-size: 0.75rem !important;
 }
 
-#thanksTo {
-  margin: 0 auto;
-  text-align: center;
-  background: rgba(216, 216, 216, 0.836);
-  padding: 20px;
-}
-
-#thanksTo img {
-  height: 150px;
-  border-radius: 50%;
-  width: 150px;
-  padding: 10px;
-}
-
 app-footer {
   display: block;
+}
+
+iframe {
+  width: 360px;
+  height: 245px;
 }

@@ -216,4 +216,17 @@ const testimonials = [
       "y dalam industri percetakayang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menj."
   }
 ];
-export { banners, about, learns, meals, testimonials };
+
+const videos = [
+  {
+    source: "https://www.youtube.com/embed/tgbNymZ7vqY"
+  },
+  {
+    source: "https://www.youtube.com/embed/tgbNymZ7vqY"
+  },
+  {
+    source: "https://www.youtube.com/embed/tgbNymZ7vqY"
+  }
+];
+
+export { banners, about, learns, meals, testimonials, videos };
