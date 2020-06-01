@@ -14,11 +14,8 @@ class AreaItem extends HTMLElement {
         />
         <span class="card-title">${this._meal.strArea}</span>
         <a class="btn-floating halfway-fab waves-effect waves-light red"
-          ><i class="material-icons">add</i></a
+          ><i class="material-icons">cooka</i></a
         >
-      </div>
-      <div class="card-content">
-        <p>${this._meal.strArea}</p>
       </div>
     </div>
   </div>`;

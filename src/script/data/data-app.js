@@ -64,12 +64,24 @@ const learns = [
     bgImg:
       "https://static.vecteezy.com/system/resources/previews/000/341/578/non_2x/professional-chef-cooking-vector-character-illustration.png"
   },
+
+  {
+    title: "1",
+    bgImg:
+      "https://image.freepik.com/free-vector/family-cooking-kitchen_52683-11891.jpg"
+  },
   {
     title: "2",
     bgImg:
       "https://static.vecteezy.com/system/resources/previews/000/341/562/non_2x/happy-woman-chef-cooking-vector-character-illustration.png"
   }
 ];
+
+const tes = {
+  title: "hiiii",
+  bgImg:
+    "https://static.vecteezy.com/system/resources/previews/000/341/578/non_2x/professional-chef-cooking-vector-character-illustration.png"
+};
 
 const meals = [
   {
@@ -80,37 +92,37 @@ const meals = [
   {
     strArea: "British",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.themost10.com/wp-content/uploads/Palace-of-Westminster-and-Big-Ben-700x400.jpg"
   },
   {
     strArea: "Canadian",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://d6metropolefroide.files.wordpress.com/2012/05/skylinefromislands.jpg"
   },
   {
     strArea: "Chinese",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.webjet.com.au/travel/wp-content/uploads/2018/03/Great_Wall_of_China.jpg"
   },
   {
     strArea: "Dutch",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.touropia.com/gfx/d/groups-of-famous-old-windmills/kinderdijk.jpg?v=1"
   },
   {
     strArea: "Egyptian",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.planetware.com/photos-large/EGY/egypt-cairo-pyramids-of-giza.jpg"
   },
   {
     strArea: "French",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://traveluto.com/wp-content/uploads/2016/03/Eiffel_Tower_2.jpg"
   },
   {
     strArea: "Greek",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://analuorongbg.weebly.com/uploads/2/8/7/7/28776471/4962129_orig.jpg"
   },
   {
     strArea: "Indian",
@@ -193,4 +205,4 @@ const meals = [
       "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
   }
 ];
-export { banners, about, learns, meals };
+export { banners, about, learns, meals, tes };

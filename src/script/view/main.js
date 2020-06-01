@@ -3,7 +3,8 @@ import "../component/container/category-list.js";
 import "../component/container/text-list.js";
 import "../component/container/learn-list.js";
 import "../component/container/area-list.js";
-import { banners, about, learns, meals } from "../data/data-app.js";
+import { banners, about, learns, meals, tes } from "../data/data-app.js";
+import List from "../component/container/list.js";
 
 const main = () => {
   const baseUrl = "https://www.themealdb.com/api/json/v1/1";
@@ -117,6 +118,18 @@ const main = () => {
   const learnListElement = document.querySelector("learn-list");
   learnListElement.learns = learns;
 
+  // const a = document.createElement("learn-item");
+  // a.learn = learns;
+  // console.log(a);
+
+  const learnList = new List("#learnList", "learn-item", learns);
+  learnList.renderItems();
+  // console.log(learnList.listElement);
+  // learnList.renderItems();
+
+  // const selectorElement = document.querySelector("#learnList");
+  // selectorElement.appendChild(learnList.listElement);
+
   const areaListElement = document.querySelector("area-list");
   areaListElement.meals = meals;
 
@@ -206,6 +219,7 @@ const main = () => {
     $(".pagination li.active a").trigger("click");
   });
 
+  //using class List
   getCategoryMeal();
   getIngredientsCategory();
 };

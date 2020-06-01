@@ -1,18 +1,18 @@
 class LearnItem extends HTMLElement {
-  set learn(learn) {
-    this._learn = learn;
+  set learn(item) {
+    this._item = item;
     this.render();
   }
 
   render() {
     this.innerHTML = `
-    <div class="col s12 m6">
+    <div class="col s12 m4 l4">
           <div class="card teal darken-1">
             <img
-              src=${this._learn.bgImg}
+              src=${this._item.bgImg}
             />
             <div class="card-content white-text">
-              <span class="card-title">${this._learn.title}</span>
+              <span class="card-title">${this._item.title}</span>
             </div>
           </div>
     </div>`;

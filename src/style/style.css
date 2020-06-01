@@ -146,3 +146,7 @@ p {
 .card .card-content {
   padding: 10px !important;
 }
+
+.btn-floating i {
+  font-size: 0.75rem !important;
+}
