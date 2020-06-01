@@ -1,6 +1,6 @@
 class CategoryItem extends HTMLElement {
   //mendapatkan data
-  set category(category) {
+  set item(category) {
     this._category = category;
     this.render();
   }

@@ -1,4 +1,4 @@
-import "../component/container/category-list.js";
+import "../component/category-item.js";
 import "../component/banner-item.js";
 import "../component/text-item.js";
 import "../component/learn-item.js";
@@ -29,11 +29,21 @@ const main = () => {
     }
   };
 
-  const renderAllCategoryMeals = categories => {
-    const categoryListElement = document.querySelector("category-list");
-    categoryListElement.categories = categories;
+  const categoryTitle = document.querySelector("#categoryTitle");
+  const title = document.createElement("h1");
+  title.innerHTML = `Meal Categories`;
+  categoryTitle.appendChild(title);
 
-    $("category-list").slick({
+  const renderAllCategoryMeals = categories => {
+    const categoryList = new List(
+      "#categoryList",
+      "category-item",
+      "Meals Category",
+      categories
+    );
+    categoryList.renderItems();
+
+    $("#categoryList").slick({
       slidesToShow: 6,
       slidesToScroll: 1,
       arrows: true,

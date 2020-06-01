@@ -3,6 +3,7 @@
 
 @import "appbar.css";
 @import "banner.css";
+@import "testimoni.css";
 
 body {
   font-family: "Quicksand", "Times New Roman", Times, serif;
@@ -149,4 +150,18 @@ p {
 
 .btn-floating i {
   font-size: 0.75rem !important;
+}
+
+#thanksTo {
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(216, 216, 216, 0.836);
+  padding: 20px;
+}
+
+#thanksTo img {
+  height: 150px;
+  border-radius: 50%;
+  width: 150px;
+  padding: 10px;
 }

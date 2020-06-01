@@ -1,0 +1,21 @@
+#testimonialContainer {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#testimonial {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#testimonial img {
+  height: 150px;
+  border-radius: 50%;
+  width: 150px;
+}
+
+#testimonial p {
+  padding: 25px;
+  text-align: center;
+}
