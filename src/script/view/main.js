@@ -3,7 +3,14 @@ import "../component/banner-item.js";
 import "../component/text-item.js";
 import "../component/learn-item.js";
 import "../component/area-item.js";
-import { banners, about, learns, meals } from "../data/data-app.js";
+import "../component/testimoni-item.js";
+import {
+  banners,
+  about,
+  learns,
+  meals,
+  testimonials
+} from "../data/data-app.js";
 import List from "../component/container/list.js";
 
 const main = () => {
@@ -218,6 +225,23 @@ const main = () => {
     // show the active page
     //
     $(".pagination li.active a").trigger("click");
+  });
+
+  const testimoniList = new List(
+    "#testimoniList",
+    "testimoni-item",
+    "",
+    testimonials
+  );
+  testimoniList.renderItems();
+
+  $("#testimoniList").slick({
+    dots: true,
+    fade: true,
+    cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true
   });
 
   //using class List

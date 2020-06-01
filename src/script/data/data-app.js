@@ -199,4 +199,21 @@ const meals = [
       "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
   }
 ];
-export { banners, about, learns, meals };
+
+const testimonials = [
+  {
+    tName: "Annisa",
+    tImg:
+      "https://avatars2.githubusercontent.com/u/36753796?s=460&u=f8bcdc42177463d700a934e2c4800093c65063fd&v=4",
+    tSay:
+      "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakayang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menj."
+  },
+  {
+    tName: "Tahira",
+    tImg:
+      "https://avatars2.githubusercontent.com/u/36753796?s=460&u=f8bcdc42177463d700a934e2c4800093c65063fd&v=4",
+    tSay:
+      "y dalam industri percetakayang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menj."
+  }
+];
+export { banners, about, learns, meals, testimonials };

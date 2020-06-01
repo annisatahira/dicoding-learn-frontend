@@ -1,21 +1,23 @@
-#testimonialContainer {
+#testimoniList {
   text-align: center;
   margin: 0 auto;
   padding: 0;
+  width: 500px;
 }
 
-#testimonialItem {
+testimoni-item {
   width: 800px;
   margin: 0 auto;
 }
 
-#testimonialItem img {
+testimoni-item img {
   height: 150px;
   border-radius: 50%;
   width: 150px;
+  margin: 0 auto;
 }
 
-#testimonialItem p {
+testimoni-item p {
   padding: 25px;
   text-align: center;
 }
