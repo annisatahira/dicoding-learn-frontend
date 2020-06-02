@@ -5,6 +5,7 @@
 @import "banner.css";
 @import "category.css";
 @import "testimoni.css";
+@import "custom-materialize.css";
 
 body {
   font-family: "Quicksand", "Times New Roman", Times, serif;
@@ -25,7 +26,7 @@ header {
 }
 
 main {
-  padding: 30px 90px;
+  padding: 30px 200px;
   margin: 0;
 }
 
@@ -35,40 +36,14 @@ main h1 {
   padding: 20px;
 }
 
-.card-image img {
-  height: 200px;
-  object-fit: cover;
-  object-position: center;
-}
-
 p {
   text-align: left;
   line-height: 1.5em;
 }
 
-.slick-next:before,
-.slick-prev:before {
-  color: #ef5350 !important;
-}
-
 .show-more {
   display: none;
   cursor: pointer;
-}
-
-.card > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-  object-position: top;
-}
-
-.card .card-content {
-  padding: 10px !important;
-}
-
-.btn-floating i {
-  font-size: 0.75rem !important;
 }
 
 app-footer {
@@ -82,4 +57,9 @@ iframe {
 
 h6 {
   display: none;
+}
+
+category-item {
+  cursor: pointer;
+  outline: 0;
 }

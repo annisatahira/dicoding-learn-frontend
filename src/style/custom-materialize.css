@@ -1,0 +1,25 @@
+.card > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card .card-content {
+  padding: 10px !important;
+}
+
+.btn-floating i {
+  font-size: 0.75rem !important;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: #ef5350 !important;
+}
+
+.card-image img {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}

@@ -86,7 +86,7 @@ const meals = [
   {
     strArea: "British",
     imgArea:
-      "https://www.themost10.com/wp-content/uploads/Palace-of-Westminster-and-Big-Ben-700x400.jpg"
+      "https://www.telegraph.co.uk/content/dam/Travel/galleries/travel/picturegalleries/The-UKs-favourite-landmarks/BigBen_2287882a.jpg"
   },
   {
     strArea: "Canadian",
