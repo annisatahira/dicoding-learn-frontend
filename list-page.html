@@ -29,9 +29,52 @@
   </head>
   <body>
     <header>
-      <h1>JUDUL PAGE 2</h1>
+      <nav>
+        <app-bar></app-bar>
+      </nav>
     </header>
-    <main></main>
+    <main>
+      <div id="detailList">
+        <div class="row">
+          <img class="col l4" src="src/images/vegan.png" />
+          <div class="col l8">
+            <h1>Sayuran</h1>
+            <p>
+              We illustrate sufficiently by taking three particularly
+              heterogeneous items from the total ... in (1) only need division
+              by the number of items, without change in the ratio. The separate
+              price sums are clearly not invariant to changes in units. ... With
+              our three heterogeneous items as an example, we construct the
+              table on page 14.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="categoryArea">
+        <div id="areaList" class="row"></div>
+        <ul class="pagination" data-page-size="8">
+          <li><a href="" rel="prev">Prev</a></li>
+          <li class="active"><a href="">1</a></li>
+          <li><a href="" rel="next">Next</a></li>
+        </ul>
+      </div>
+      <div id="detailItem">
+        <div class="row">
+          <div class="col l12"><img src="./src/images/dessert.png" /></div>
+          <ul class="tabs">
+            <li class="tab col s3"><a href="#test1">Test 1</a></li>
+            <li class="tab col s3">
+              <a class="active" href="#test2">Test 2</a>
+            </li>
+            <li class="tab col s3 disabled">
+              <a href="#test3">Disabled Tab</a>
+            </li>
+            <li class="tab col s3"><a href="#test4">Test 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
     <footer></footer>
 
     <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
@@ -40,6 +83,6 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     ></script>
-    <!-- <script src="src/script/main.js"></script> -->
+    <script src="app2.js" type="module"></script>
   </body>
 </html>

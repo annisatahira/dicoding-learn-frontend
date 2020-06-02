@@ -32,7 +32,7 @@ class AppBar extends HTMLElement {
       
       .search-wrapper {
         position: absolute;
-        top: 25px;
+        top: 35px;
         right: 20px;
         box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
         border-radius: 20px;
@@ -143,7 +143,7 @@ class AppBar extends HTMLElement {
         </form>
       </div>
     </div>
-      <a href="#" class="logo">COOKA</a>
+      <a href="index.html" class="logo">COOKA</a>
       <div class="search-wrapper">
         <input
           type="text"
