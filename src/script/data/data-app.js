@@ -1,17 +1,17 @@
 const banners = [
   {
-    id: 1,
-    title: "Quick Learn",
+    id: 2,
+    title: "Bismillah",
     bannerImage:
-      "https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+      "https://www.helpguide.org/wp-content/uploads/young-woman-and-man-preparing-meal.jpg",
     description:
       "Lor but also the leap into electronic typesetting, remaining essentially unchanged. raset sheets containing Lorem Ipsum passages, and more ."
   },
   {
-    id: 2,
-    title: "Bismillah",
+    id: 1,
+    title: "Quick Learn",
     bannerImage:
-      "https://www.foodiesfeed.com/wp-content/uploads/2019/05/red-fruit-and-vegetables-on-a-white-background-3.jpg",
+      "https://cdn.vox-cdn.com/thumbor/6nuGrh340E58tg1mJUoaW5CyKEA=/0x0:5500x3671/1200x800/filters:focal(2310x1396:3190x2276)/cdn.vox-cdn.com/uploads/chorus_image/image/66563372/GettyImages_849177432.0.jpg",
     description:
       "Lor but also the leap into electronic typesetting, remaining essentially unchanged. raset sheets containing Lorem Ipsum passages, and more ."
   },
@@ -19,7 +19,7 @@ const banners = [
     id: 2,
     title: "Morning Coffe",
     bannerImage:
-      "https://www.foodiesfeed.com/wp-content/uploads/2016/07/red-fruit-and-vegetables-from-above.jpg",
+      "https://metiza.com/wp-content/uploads/2019/04/healthy-cooking-classes-in-Canada.jpg",
     description:
       "Lor but also the leap into electronic typesetting, remaining essentially unchanged. raset sheets containing Lorem Ipsum passages, and more ."
   }
@@ -62,18 +62,18 @@ const learns = [
   {
     title: "hiiii",
     bgImg:
-      "https://static.vecteezy.com/system/resources/previews/000/341/578/non_2x/professional-chef-cooking-vector-character-illustration.png"
+      "https://www.refrigeratedfrozenfood.com/ext/resources/NEW_RD_Website/DefaultImages/default-at-home-cooking-feature.jpg?1484170386"
   },
 
   {
     title: "1",
     bgImg:
-      "https://image.freepik.com/free-vector/family-cooking-kitchen_52683-11891.jpg"
+      "https://www.helpguide.org/wp-content/uploads/young-woman-and-man-preparing-meal.jpg"
   },
   {
     title: "2",
     bgImg:
-      "https://static.vecteezy.com/system/resources/previews/000/341/562/non_2x/happy-woman-chef-cooking-vector-character-illustration.png"
+      "https://www.outincanberra.com.au/wp-content/uploads/2017/05/shutterstock_582618685.jpg"
   }
 ];
 

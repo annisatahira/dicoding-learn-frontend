@@ -9,9 +9,7 @@ class BannerItem extends HTMLElement {
     <img src=${this._banner.bannerImage} alt="food wallpaper"/>
     <div class="text-banner">
       <h1>${this._banner.title}</h1>
-      <p>
-        ${this._banner.description}
-      </p>
+      
     </div>
          `;
   }

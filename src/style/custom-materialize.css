@@ -15,11 +15,15 @@
 
 .slick-next:before,
 .slick-prev:before {
-  color: #ef5350 !important;
+  color: teal !important;
 }
 
 .card-image img {
   height: 200px;
   object-fit: cover;
   object-position: center;
+}
+
+li.active {
+  background-color: teal !important;
 }

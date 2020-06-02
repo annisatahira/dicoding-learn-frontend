@@ -40,20 +40,6 @@ const main = () => {
     }
   };
 
-  const getDetailItem = async () => {
-    try {
-      const response = await fetch(`${baseUrl}/list`);
-      const responseJson = await response.json();
-      if (responseJson.error) {
-        showResponseMessage(responseJson.message);
-      } else {
-        renderAllBooks(responseJson.books);
-      }
-    } catch (error) {
-      showResponseMessage(error);
-    }
-  };
-
   const categoryTitle = document.querySelector("#categoryTitle");
   const title = document.createElement("h1");
   title.innerHTML = `Meal Categories`;
@@ -64,7 +50,7 @@ const main = () => {
     categoryList.renderItems();
 
     $("#categoryList").slick({
-      slidesToShow: 6,
+      slidesToShow: 5,
       slidesToScroll: 1,
       arrows: true,
       infinite: false,
