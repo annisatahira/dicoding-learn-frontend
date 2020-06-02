@@ -9,6 +9,7 @@ class CategoryItem extends HTMLElement {
     this.innerHTML = `
         <div>
           <figure>
+            <h6>${this._category.idCategory}</h6>
             <img src=${this._category.strCategoryThumb} alt="food category" />
             <figcaption>${this._category.strCategory}</figcaption>
           </figure>

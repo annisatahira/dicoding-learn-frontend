@@ -1,17 +1,10 @@
 class List {
-  constructor(selector, item, title, data) {
+  constructor(selector, item, data) {
     const selectorElement = document.querySelector(selector);
 
     this.selector = selectorElement;
     this.listElement = item;
-    this.title = title;
     this.data = data;
-  }
-
-  renderTitle() {
-    const title = document.createElement("h1");
-    title.innerHTML = `${this.title}`;
-    this.selector.appendChild(title);
   }
 
   renderItems() {

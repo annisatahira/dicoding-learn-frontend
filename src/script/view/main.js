@@ -13,7 +13,9 @@ import {
   testimonials,
   videos
 } from "../data/data-app.js";
+
 import List from "../component/container/list.js";
+import TitleList from "../component/container/list-w-title.js";
 
 const main = () => {
   const baseUrl = "https://www.themealdb.com/api/json/v1/1";
@@ -38,18 +40,27 @@ const main = () => {
     }
   };
 
+  const getDetailItem = async () => {
+    try {
+      const response = await fetch(`${baseUrl}/list`);
+      const responseJson = await response.json();
+      if (responseJson.error) {
+        showResponseMessage(responseJson.message);
+      } else {
+        renderAllBooks(responseJson.books);
+      }
+    } catch (error) {
+      showResponseMessage(error);
+    }
+  };
+
   const categoryTitle = document.querySelector("#categoryTitle");
   const title = document.createElement("h1");
   title.innerHTML = `Meal Categories`;
   categoryTitle.appendChild(title);
 
   const renderAllCategoryMeals = categories => {
-    const categoryList = new List(
-      "#categoryList",
-      "category-item",
-      "Meals Category",
-      categories
-    );
+    const categoryList = new List("#categoryList", "category-item", categories);
     categoryList.renderItems();
 
     $("#categoryList").slick({
@@ -107,7 +118,7 @@ const main = () => {
     alert(message);
   };
 
-  const bannerList = new List("#banner", "banner-item", "", banners);
+  const bannerList = new List("#banner", "banner-item", banners);
   bannerList.renderItems();
 
   $("#banner").slick({
@@ -119,7 +130,7 @@ const main = () => {
     arrows: false
   });
 
-  const textList = new List("#textList", "text-item", "", about);
+  const textList = new List("#textList", "text-item", about);
   textList.renderItems();
   textList.renderMore();
 
@@ -135,12 +146,20 @@ const main = () => {
       : $(this).text("Show more");
   });
 
-  const learnList = new List("#learnList", "learn-item", "Why Cooking", learns);
-  learnList.renderTitle();
+  const learnList = new TitleList(
+    "#learnList",
+    "learn-item",
+    learns,
+    "Why Cooking"
+  );
   learnList.renderItems();
 
-  const areaList = new List("#areaList", "area-item", "Area Categories", meals);
-  areaList.renderTitle();
+  const areaList = new TitleList(
+    "#areaList",
+    "area-item",
+    meals,
+    "Area Categories"
+  );
   areaList.renderItems();
 
   $(function() {
@@ -237,7 +256,6 @@ const main = () => {
   const testimoniList = new List(
     "#testimoniList",
     "testimoni-item",
-    "Testimoni",
     testimonials
   );
 
@@ -252,14 +270,17 @@ const main = () => {
     arrows: true
   });
 
-  const videoList = new List(
+  const videoList = new TitleList(
     "#videoList",
     "video-item",
-    "Cooking Video",
-    videos
+    videos,
+    "Cooking Video"
   );
-  videoList.renderTitle();
   videoList.renderItems();
+
+  $("#changePage").click(function() {
+    $(location).attr("href", "list-page.html");
+  });
 
   getCategoryMeal();
   getIngredientsCategory();
