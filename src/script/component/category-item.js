@@ -11,7 +11,7 @@ class CategoryItem extends HTMLElement {
           <figure>
             <h6>${this._category.idCategory}</h6>
             <img src=${this._category.strCategoryThumb} alt="food category" />
-            <figcaption>${this._category.strCategory}</figcaption>
+            <figcaption class="textValue">${this._category.strCategory}</figcaption>
           </figure>
         </div>
         `;

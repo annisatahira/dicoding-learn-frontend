@@ -99,6 +99,15 @@ const main = () => {
     //
     $(".pagination li.active a").trigger("click");
   });
+
+  const setValue = () => {
+    let value = (document.querySelector(
+      ".resultText"
+    ).innerHTML = localStorage.getItem("data"));
+    return value;
+  };
+
+  setValue();
 };
 
 export default main;

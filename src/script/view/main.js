@@ -26,7 +26,7 @@ const main = () => {
       const responseJson = await response.json();
       await renderAllCategoryMeals(responseJson.categories);
       await slick();
-      change();
+      changeList();
     } catch (message) {
       showResponeMessage(message);
     }
@@ -268,10 +268,17 @@ const main = () => {
   );
   videoList.renderItems();
 
-  const change = () => {
+  const changeList = () => {
     $(".changeList").click(function() {
+      passValue();
       $(location).attr("href", "list-page.html");
     });
+  };
+
+  const passValue = () => {
+    let value = document.querySelector(".textValue").innerHTML;
+    localStorage.setItem("data", value);
+    return false;
   };
 
   getCategoryMeal();

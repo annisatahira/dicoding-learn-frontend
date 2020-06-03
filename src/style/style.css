@@ -25,6 +25,14 @@ header {
   font-size: 0;
 }
 
+#bread {
+  padding: 50px;
+}
+
+.breadcrumb {
+  color: teal !important;
+}
+
 main {
   padding: 30px 200px;
   margin: 0;
@@ -34,6 +42,7 @@ main h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
   padding: 20px;
+  font-weight: bold;
 }
 
 p {
