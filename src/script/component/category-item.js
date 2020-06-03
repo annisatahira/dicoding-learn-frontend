@@ -7,7 +7,7 @@ class CategoryItem extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        <div>
+        <div class="changeList">
           <figure>
             <h6>${this._category.idCategory}</h6>
             <img src=${this._category.strCategoryThumb} alt="food category" />

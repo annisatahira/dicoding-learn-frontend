@@ -24,7 +24,9 @@ const main = () => {
     try {
       const response = await fetch(`${baseUrl}/categories.php`);
       const responseJson = await response.json();
-      renderAllCategoryMeals(responseJson.categories);
+      await renderAllCategoryMeals(responseJson.categories);
+      await slick();
+      change();
     } catch (message) {
       showResponeMessage(message);
     }
@@ -48,7 +50,9 @@ const main = () => {
   const renderAllCategoryMeals = categories => {
     const categoryList = new List("#categoryList", "category-item", categories);
     categoryList.renderItems();
+  };
 
+  const slick = () => {
     $("#categoryList").slick({
       slidesToShow: 5,
       slidesToScroll: 1,
@@ -264,9 +268,11 @@ const main = () => {
   );
   videoList.renderItems();
 
-  $(".changeList").click(function() {
-    $(location).attr("href", "list-page.html");
-  });
+  const change = () => {
+    $(".changeList").click(function() {
+      $(location).attr("href", "list-page.html");
+    });
+  };
 
   getCategoryMeal();
   getIngredientsCategory();
