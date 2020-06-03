@@ -4,6 +4,7 @@ import "../component/text-item.js";
 import "../component/learn-item.js";
 import "../component/area-item.js";
 import "../component/video-item.js";
+import "../component/ingredient-item.js";
 import "../component/testimoni-item.js";
 import {
   banners,
@@ -82,16 +83,13 @@ const main = () => {
   };
 
   const renderIngredients = meals => {
-    const ingredientListElement = document.querySelector("#ingredientList");
-    ingredientListElement.innerHTML = "<h1>Ingredients Category</h1>";
-
-    meals.forEach(meal => {
-      ingredientListElement.innerHTML += `
-      <div id="ingredientItem" class="col s12 m4 l3">
-        <p><a>${meal.strIngredient}</a></p>
-      </div>
-      `;
-    });
+    const IngredientList = new TitleList(
+      "#ingredientList",
+      "ingredient-item",
+      meals,
+      "Ingedient Category"
+    );
+    IngredientList.renderItems();
 
     const ingredientItemElement = document.querySelectorAll("#ingredientItem");
 
@@ -267,6 +265,13 @@ const main = () => {
     "Cooking Video"
   );
   videoList.renderItems();
+
+  const changePage = async () => {
+    try {
+    } catch (message) {
+      showResponeMessage(message);
+    }
+  };
 
   const changeList = () => {
     $(".changeList").click(function() {
