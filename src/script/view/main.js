@@ -84,7 +84,7 @@ const main = () => {
     meals.forEach(meal => {
       ingredientListElement.innerHTML += `
       <div id="ingredientItem" class="col s12 m4 l3">
-        <p>${meal.strIngredient}</p>
+        <p><a>${meal.strIngredient}</a></p>
       </div>
       `;
     });
@@ -264,7 +264,7 @@ const main = () => {
   );
   videoList.renderItems();
 
-  $("#changePage").click(function() {
+  $(".changeList").click(function() {
     $(location).attr("href", "list-page.html");
   });
 
