@@ -270,13 +270,15 @@ const main = () => {
 
   const changeList = () => {
     $(".changeList").click(function() {
-      passValue();
+      const index = $(".changeList").index(this);
+      passValue(index);
       $(location).attr("href", "list-page.html");
     });
   };
 
-  const passValue = () => {
-    let value = document.querySelector(".textValue").innerHTML;
+  const passValue = index => {
+    let element = document.querySelectorAll(".textValue");
+    let value = element[index].innerHTML;
     localStorage.setItem("data", value);
     return false;
   };
