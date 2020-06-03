@@ -7,12 +7,12 @@ class AreaItem extends HTMLElement {
   render() {
     this.innerHTML = `
     <div class="col s12 m6 l3">
-    <div class="card">
+    <div class="card changeList">
       <div class="card-image">
         <img
           src="${this._meal.imgArea}"
         />
-        <span class="card-title">${this._meal.strArea}</span>
+        <span class="card-title textValue">${this._meal.strArea}</span>
         <a class="btn-floating halfway-fab waves-effect waves-light red"
           ><i class="material-icons">cooka</i></a
         >

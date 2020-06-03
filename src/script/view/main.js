@@ -37,7 +37,8 @@ const main = () => {
     try {
       const response = await fetch(`${baseUrl}/list.php?i=list`);
       const responseJson = await response.json();
-      renderIngredients(responseJson.meals);
+      await renderIngredients(responseJson.meals);
+      changeList();
     } catch (message) {
       showResponeMessage(message);
     }
@@ -148,9 +149,18 @@ const main = () => {
     meals,
     "Area Categories"
   );
-  areaList.renderItems();
 
-  $(function() {
+  const getAreaList = async () => {
+    try {
+      await areaList.renderItems();
+      await pagination();
+      changeList();
+    } catch (message) {
+      showResponeMessage(message);
+    }
+  };
+
+  const pagination = () => {
     //
     //  get num of item and compute num of pages
     //
@@ -234,7 +244,7 @@ const main = () => {
     // show the active page
     //
     $(".pagination li.active a").trigger("click");
-  });
+  };
 
   const TestimoniTitle = document.querySelector("#testimoniTitle");
   const tTitle = document.createElement("h1");
@@ -266,13 +276,6 @@ const main = () => {
   );
   videoList.renderItems();
 
-  const changePage = async () => {
-    try {
-    } catch (message) {
-      showResponeMessage(message);
-    }
-  };
-
   const changeList = () => {
     $(".changeList").click(function() {
       const index = $(".changeList").index(this);
@@ -290,6 +293,7 @@ const main = () => {
 
   getCategoryMeal();
   getIngredientsCategory();
+  getAreaList();
 };
 
 export default main;
