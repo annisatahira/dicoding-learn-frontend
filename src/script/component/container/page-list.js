@@ -10,7 +10,7 @@ class PageList {
   getDetailList = async () => {
     try {
       const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/filter.php?a=${this.value}`
+        `https://www.themealdb.com/api/json/v1/1/filter.php?${this.value}`
       );
       const responseJson = await response.json();
       this.renderDetailList(responseJson.meals);
@@ -21,7 +21,7 @@ class PageList {
 
   renderDetailList = meals => {
     const detailListElement = document.querySelector("#detailList");
-    detailListElement.innerHTML = `<h1>${this.value} Meals</h1>`;
+    detailListElement.innerHTML = `<h1>Meals</h1>`;
 
     meals.forEach(meal => {
       detailListElement.innerHTML += `

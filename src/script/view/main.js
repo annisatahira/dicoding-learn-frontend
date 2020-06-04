@@ -17,6 +17,7 @@ import {
 
 import List from "../component/container/list.js";
 import TitleList from "../component/container/list-w-title.js";
+import PassValue from "./pass-value.js";
 
 const main = () => {
   const baseUrl = "https://www.themealdb.com/api/json/v1/1";
@@ -27,7 +28,7 @@ const main = () => {
       const responseJson = await response.json();
       await renderAllCategoryMeals(responseJson.categories);
       await slick();
-      changeList();
+      // changeList();
     } catch (message) {
       showResponeMessage(message);
     }
@@ -38,7 +39,7 @@ const main = () => {
       const response = await fetch(`${baseUrl}/list.php?i=list`);
       const responseJson = await response.json();
       await renderIngredients(responseJson.meals);
-      changeList();
+      // changeList();
     } catch (message) {
       showResponeMessage(message);
     }
@@ -153,7 +154,7 @@ const main = () => {
       );
       await areaList.renderItems();
       await pagination();
-      changeList();
+      changeListArea();
     } catch (message) {
       showResponeMessage(message);
     }
@@ -275,20 +276,18 @@ const main = () => {
   );
   videoList.renderItems();
 
-  const changeList = () => {
+  const changeListArea = () => {
     $(".changeList").click(function() {
       const index = $(".changeList").index(this);
-      passValue(index);
+      let element = document.querySelectorAll(".textValue");
+      let value = element[index].innerHTML;
+      let listArea = `a=${value}`;
+      localStorage.setItem("data", listArea);
       $(location).attr("href", "list-page.html");
     });
   };
 
-  const passValue = index => {
-    let element = document.querySelectorAll(".textValue");
-    let value = element[index].innerHTML;
-    localStorage.setItem("data", value);
-    return false;
-  };
+  // const areaListChange = new PassValue("a");
 
   getCategoryMeal();
   getIngredientsCategory();
