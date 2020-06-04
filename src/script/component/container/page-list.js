@@ -21,7 +21,7 @@ class PageList {
 
   renderDetailList = meals => {
     const detailListElement = document.querySelector("#detailList");
-    detailListElement.innerHTML = `<h1>${this.value} Foods</h1>`;
+    detailListElement.innerHTML = `<h1>${this.value} Meals</h1>`;
 
     meals.forEach(meal => {
       detailListElement.innerHTML += `
