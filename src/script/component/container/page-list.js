@@ -25,14 +25,14 @@ class PageList {
 
     meals.forEach(meal => {
       detailListElement.innerHTML += `
-      <div class="col s12 m6 l3">
+      <div class="col s12 m6 l4">
       <div class="card">
       <div class="card-image">
         <img src=${meal.strMealThumb}>
         <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">cooka</i></a>
       </div>
       <div class="card-content">
-      <span class="card-title">${meal.strMeal}</span>
+       <span class="card-title">${meal.strMeal}</span>
       </div>
     </div>
     </div>
