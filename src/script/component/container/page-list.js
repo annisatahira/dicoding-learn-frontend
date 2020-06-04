@@ -25,6 +25,22 @@ class PageList {
 
     meals.forEach(meal => {
       detailListElement.innerHTML += `
+      <style>
+      .card-content {
+        position: relative;
+        text-align: center;
+        height: 100px;
+        padding: 0;
+      }
+      
+      .card-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+      </style>
       <div class="col s12 m6 l4">
       <div class="card">
       <div class="card-image">
