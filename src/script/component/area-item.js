@@ -6,8 +6,8 @@ class AreaItem extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <div class="col s12 m6 l3">
-    <div class="card changeList">
+    <div class="col s12 m6 l3 changeList">
+    <div class="card">
       <div class="card-image">
         <img
           src="${this._meal.imgArea}"

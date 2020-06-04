@@ -77,7 +77,7 @@ const learns = [
   }
 ];
 
-const meals = [
+const areas = [
   {
     strArea: "American",
     imgArea:
@@ -229,4 +229,4 @@ const videos = [
   }
 ];
 
-export { banners, about, learns, meals, testimonials, videos };
+export { banners, about, learns, areas, testimonials, videos };

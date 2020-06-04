@@ -10,7 +10,7 @@ import {
   banners,
   about,
   learns,
-  meals,
+  areas,
   testimonials,
   videos
 } from "../data/data-app.js";
@@ -143,15 +143,14 @@ const main = () => {
   );
   learnList.renderItems();
 
-  const areaList = new TitleList(
-    "#areaList",
-    "area-item",
-    meals,
-    "Area Categories"
-  );
-
   const getAreaList = async () => {
     try {
+      const areaList = await new TitleList(
+        "#areaList",
+        "area-item",
+        areas,
+        "Area Categories"
+      );
       await areaList.renderItems();
       await pagination();
       changeList();

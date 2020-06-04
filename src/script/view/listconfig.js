@@ -1,15 +1,14 @@
 import "../component/area-item.js";
 
-import { meals } from "../data/data-app.js";
-
-import List from "../component/container/list.js";
+import { areas } from "../data/data-app.js";
 import TitleList from "../component/container/list-w-title.js";
+import PageList from "../component/container/page-list.js";
 
 const main = () => {
   const areaList = new TitleList(
     "#areaList",
     "area-item",
-    meals,
+    areas,
     "Area Categories"
   );
   areaList.renderItems();
@@ -104,6 +103,7 @@ const main = () => {
     let value = (document.querySelector(
       ".resultText"
     ).innerHTML = localStorage.getItem("data"));
+    // const pageList = new PageList(value);
     return value;
   };
 
