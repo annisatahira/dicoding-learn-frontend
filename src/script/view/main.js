@@ -59,7 +59,7 @@ const main = () => {
   const ingredientTitle = document.querySelector("#ingredientTitle");
   const iTitle = document.createElement("h1");
   iTitle.innerHTML = `Ingredient Categories`;
-  ingredientTitle.appendChild(title);
+  ingredientTitle.appendChild(iTitle);
 
   const slick = () => {
     $("#categoryList").slick({
