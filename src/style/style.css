@@ -99,7 +99,7 @@ nav {
   margin-top: 30px;
   margin: auto;
   padding: 20px;
-  /* z-index: 1; */
+  z-index: 1;
   overflow-x: hidden;
 }
 
@@ -143,4 +143,8 @@ nav {
 
 #overlayItem .closebtn:hover {
   color: #ccc;
+}
+
+ol {
+  text-align: left;
 }
