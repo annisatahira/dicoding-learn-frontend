@@ -11,25 +11,27 @@ const main = () => {
     } catch (error) {}
   };
 
-  const setIdDetail = () => {
-    $("#detailList").on("click", ".item", function() {
-      const index = $(this).index(".item");
-      let element = document.querySelectorAll(".idMeal");
-      let value = element[index].innerHTML;
-      localStorage.setItem("id", value);
-    });
-  };
+  $(".tabs").tabs({});
 
-  const getIdDetail = () => {
-    $("#detailList").on("click", function() {
-      let a = localStorage.getItem("id");
-      console.log(a);
-      let pageDetail = new PageDetail(a);
-      pageDetail;
-    });
-  };
-  setIdDetail();
-  getIdDetail(); // getDetailPage();
+  // const setIdDetail = () => {
+  //   $("#detailList").on("click", ".item", function() {
+  //     const index = $(this).index(".item");
+  //     let element = document.querySelectorAll(".idMeal");
+  //     let value = element[index].innerHTML;
+  //     localStorage.setItem("id", value);
+  //   });
+  // };
+
+  // const getIdDetail = () => {
+  //   $("#detailList").on("click", function() {
+  //     let a = localStorage.getItem("id");
+  //     console.log(a);
+  //     let pageDetail = new PageDetail(a);
+  //     pageDetail;
+  //   });
+  // };
+  // setIdDetail();
+  // getIdDetail(); // getDetailPage();
 
   setValue();
   // getDetailPage();

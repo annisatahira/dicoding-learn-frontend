@@ -43,9 +43,9 @@ class PageDetail {
               <li class="tab col s3"><a class="active" href="#swipe-2">Test 2</a></li>
               <li class="tab col s3"><a href="#swipe-3">Test 3</a></li>
             </ul>
-            <div id="swipe-1" class="col s12 blue">First tab content</div>
-            <div id="swipe-2" class="col s12 red">Second tab content</div>
-            <div id="swipe-3" class="col s12 green">Third tab content</div>
+            <div id="swipe-1" class="col s12 blue content">First tab content</div>
+            <div id="swipe-2" class="col s12 red content">Second tab content</div>
+            <div id="swipe-3" class="col s12 green content">Third tab content</div>
             </div>
           </div>
         </div>

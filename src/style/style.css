@@ -93,12 +93,14 @@ nav {
 #itemContent {
   position: relative;
   top: 10%;
-  width: 700px;
+  width: 60%;
   height: 80%;
   text-align: center;
   margin-top: 30px;
   margin: auto;
   padding: 20px;
+  /* z-index: 1; */
+  overflow-x: hidden;
 }
 
 #itemContent img {
@@ -120,13 +122,14 @@ nav {
 #overlayItem {
   height: 100%;
   width: 100%;
-  display: none;
+  display: block;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: rgb(167, 167, 167);
   background-color: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
 }
 
 #overlayItem .closebtn {
