@@ -18,21 +18,37 @@ import {
 import List from "../component/container/list.js";
 import TitleList from "../component/container/list-w-title.js";
 import PassValue from "./pass-value.js";
+import DataList from "../component/container/change-list-page.js";
 
 const main = () => {
   const baseUrl = "https://www.themealdb.com/api/json/v1/1";
 
   const getCategoryMeal = async () => {
     try {
-      const response = await fetch(`${baseUrl}/categories.php`);
-      const responseJson = await response.json();
-      await renderAllCategoryMeals(responseJson.categories);
+      const categoryList = await new DataList(
+        "categories.php",
+        "#categoryList",
+        "category-item"
+      );
+      await categoryList.getList();
       await slick();
-      // changeList();
+      changeListCategory();
     } catch (message) {
       showResponeMessage(message);
     }
   };
+
+  // const getCategoryMeal = async () => {
+  //   try {
+  //     const response = await fetch(`${baseUrl}/categories.php`);
+  //     const responseJson = await response.json();
+  //     await renderAllCategoryMeals(responseJson.categories);
+  //     await slick();
+  //     changeListCategory();
+  //   } catch (message) {
+  //     showResponeMessage(message);
+  //   }
+  // };
 
   const getIngredientsCategory = async () => {
     try {
@@ -277,9 +293,9 @@ const main = () => {
   videoList.renderItems();
 
   const changeListArea = () => {
-    $(".changeList").click(function() {
-      const index = $(".changeList").index(this);
-      let element = document.querySelectorAll(".textValue");
+    $(".changeListArea").click(function() {
+      const index = $(".changeListArea").index(this);
+      let element = document.querySelectorAll(".areaId");
       let value = element[index].innerHTML;
       let listArea = `a=${value}`;
       localStorage.setItem("data", listArea);
@@ -287,7 +303,22 @@ const main = () => {
     });
   };
 
-  // const areaListChange = new PassValue("a");
+  const changeListCategory = () => {
+    $(".changeListCategory").click(function() {
+      const index = $(".changeListCategory").index(this);
+      let element = document.querySelectorAll(".categoryId");
+      let value = element[index].innerHTML;
+      let listCategory = `c=${value}`;
+      localStorage.setItem("data", listCategory);
+      $(location).attr("href", "list-page.html");
+    });
+  };
+
+  // const changeListCategory = new ChangeList(
+  //   ".changeListCategory",
+  //   ".categoryId",
+  //   "c"
+  // );
 
   getCategoryMeal();
   getIngredientsCategory();

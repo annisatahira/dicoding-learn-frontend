@@ -1,7 +1,6 @@
 class List {
   constructor(selector, item, data) {
     const selectorElement = document.querySelector(selector);
-
     this.selector = selectorElement;
     this.listElement = item;
     this.data = data;

@@ -7,7 +7,7 @@ class IngredientItem extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <div id="ingredientItem" class="col s12 m4 l3 changeList">
+    <div id="ingredientItem" class="col s12 m4 l3 changeListIngredient">
          <p><a class="textValue">${this._ingredient.strIngredient}</a></p>
      </div>
           `;
