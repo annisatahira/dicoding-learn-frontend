@@ -31,33 +31,6 @@ const main = () => {
   setIdDetail();
   getIdDetail(); // getDetailPage();
 
-  const showDetail = () => {
-    const a = document.querySelectorAll("overlayItem");
-    a;
-    a[0].style.display = "block";
-  };
-
-  // const getDetailPage = async () => {
-  //   try {
-  //     await setIdDetail();
-  //     let item = await localStorage.getItem("id");
-  //     console.log(item);
-  //     let pageDetail = await new PageDetail(item);
-  //     pageDetail;
-  //     // showDetail();
-  //   } catch (error) {}
-  // };
-
-  // const showDetail = () => {
-  //   $("#detailList").on("click", function() {
-  //     alert("hi");
-  //   });
-  // };
-
-  // $(".closebtn").on("click", function() {
-  //   document.getElementById("overlayItem").style.display = "none";
-  // });
-
   setValue();
   // getDetailPage();
   // getIdDetail();

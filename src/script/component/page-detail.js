@@ -27,7 +27,7 @@ class PageDetail {
           <div id="itemContent" class="card">
             <div class="row">
               <div class="col l12">
-                <img src="./src/images/dessert.png" />
+                <img src=${meal.strMealThumb} />
                 <h1>${meal.strMeal}</h1>
                 <p>
                   We illustrate sufficiently by taking three particularly
@@ -38,16 +38,14 @@ class PageDetail {
                   example, we construct the table on page 14.
                 </p>
               </div>
-              <ul class="tabs">
-                <li class="tab col s3"><a href="#test1">Test 1</a></li>
-                <li class="tab col s3">
-                  <a class="active" href="#test2">Test 2</a>
-                </li>
-                <li class="tab col s3 disabled">
-                  <a href="#test3">Disabled Tab</a>
-                </li>
-                <li class="tab col s3"><a href="#test4">Test 4</a></li>
-              </ul>
+              <ul id="tabs-swipe-demo" class="tabs">
+              <li class="tab col s3"><a href="#swipe-1">Test 1</a></li>
+              <li class="tab col s3"><a class="active" href="#swipe-2">Test 2</a></li>
+              <li class="tab col s3"><a href="#swipe-3">Test 3</a></li>
+            </ul>
+            <div id="swipe-1" class="col s12 blue">First tab content</div>
+            <div id="swipe-2" class="col s12 red">Second tab content</div>
+            <div id="swipe-3" class="col s12 green">Third tab content</div>
             </div>
           </div>
         </div>
@@ -55,11 +53,15 @@ class PageDetail {
     });
   };
 
+  tabFunction = () => {
+    $(".tabs").tabs({
+      swipeable: true
+    });
+  };
+
   showDetail = () => {
     document.querySelector("#overlayItem").style.display = "block";
-    $(".closebtn").on("click", function() {
-      document.getElementById("overlayItem").style.display = "none";
-    });
+    this.tabFunction();
     $(".closebtn").on("click", function(e) {
       e.preventDefault();
       document.getElementById("overlayItem").style.display = "none";
