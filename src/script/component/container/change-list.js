@@ -16,7 +16,7 @@ class ChangeList {
       let value = element[index].innerHTML;
       let listData = `${_selector}=${value}`;
       localStorage.setItem("data", listData);
-      $(location).attr("href", "list-page.html");
+      $(location).attr("href", "page-list.html");
     });
   };
 }

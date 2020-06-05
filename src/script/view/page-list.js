@@ -10,6 +10,18 @@ const main = () => {
     } catch (error) {}
   };
 
+  $("#detailList").on("click", ".item", function() {
+    const index = $(this).index(".item");
+    let element = document.querySelectorAll(".idMeal");
+    let value = element[index].innerHTML;
+    localStorage.setItem("id", value);
+    document.getElementById("overlayItem").style.display = "block";
+  });
+
+  $(".closebtn").on("click", function() {
+    document.getElementById("overlayItem").style.display = "none";
+  });
+
   setValue();
 };
 

@@ -91,10 +91,13 @@ nav {
 }
 
 #detailItem {
-  text-align: center;
-  margin: 0 auto;
-  height: 100%;
+  position: relative;
+  top: 10%;
   width: 700px;
+  height: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
   padding: 20px;
 }
 
@@ -111,4 +114,29 @@ nav {
   color: #ef5350;
   font-weight: bold;
   cursor: pointer;
+}
+
+#overlayItem {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(167, 167, 167);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#overlayItem .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+#overlayItem .closebtn:hover {
+  color: #ccc;
 }

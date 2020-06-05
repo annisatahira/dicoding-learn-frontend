@@ -40,17 +40,18 @@ class PageList {
         transform: translate(-50%, -50%);
       }
       </style>
-      <div class="col s12 m6 l4">
-      <div class="card">
-      <div class="card-image">
-        <img src=${meal.strMealThumb}>
-        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">cooka</i></a>
+      <div class="col s12 m6 l4 listItem">
+        <div class="card item">
+          <div class="card-image">
+            <img src=${meal.strMealThumb}>
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">cooka</i></a>
+          </div>
+          <div class="card-content">
+            <h6 class="idMeal">${meal.idMeal}</h6>
+            <span class="card-title">${meal.strMeal}</span>
+          </div>
+        </div>
       </div>
-      <div class="card-content">
-       <span class="card-title">${meal.strMeal}</span>
-      </div>
-    </div>
-    </div>
       `;
     });
   };
