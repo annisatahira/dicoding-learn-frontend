@@ -12,6 +12,7 @@ class PageList {
         `https://www.themealdb.com/api/json/v1/1/filter.php?${this.value}`
       );
       const responseJson = await response.json();
+      console.log(responseJson);
       this.renderDetailList(responseJson.meals);
     } catch (error) {
       this.showResponseMessage(error);

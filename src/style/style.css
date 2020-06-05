@@ -90,7 +90,7 @@ nav {
   margin: 0;
 }
 
-#detailItem {
+#itemContent {
   position: relative;
   top: 10%;
   width: 700px;
@@ -101,7 +101,7 @@ nav {
   padding: 20px;
 }
 
-#detailItem img {
+#itemContent img {
   height: 200px;
   margin: 0 auto;
 }
