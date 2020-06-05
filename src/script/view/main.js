@@ -38,28 +38,32 @@ const main = () => {
     }
   };
 
-  // const getCategoryMeal = async () => {
-  //   try {
-  //     const response = await fetch(`${baseUrl}/categories.php`);
-  //     const responseJson = await response.json();
-  //     await renderAllCategoryMeals(responseJson.categories);
-  //     await slick();
-  //     changeListCategory();
-  //   } catch (message) {
-  //     showResponeMessage(message);
-  //   }
-  // };
-
   const getIngredientsCategory = async () => {
     try {
-      const response = await fetch(`${baseUrl}/list.php?i=list`);
-      const responseJson = await response.json();
-      await renderIngredients(responseJson.meals);
-      // changeList();
+      const ingredientList = await new DataList(
+        "list.php?i=list",
+        "#ingredientList",
+        "ingredient-item"
+      );
+      console.log(ingredientList);
+      await ingredientList.getList();
+      displayIngredients();
+      // changeListCategory();
     } catch (message) {
       showResponeMessage(message);
     }
   };
+
+  // const getIngredientsCategory = async () => {
+  //   try {
+  //     const response = await fetch(`${baseUrl}/list.php?i=list`);
+  //     const responseJson = await response.json();
+  //     await renderIngredients(responseJson.meals);
+  //     // changeList();
+  //   } catch (message) {
+  //     showResponeMessage(message);
+  //   }
+  // };
 
   const categoryTitle = document.querySelector("#categoryTitle");
   const title = document.createElement("h1");
@@ -100,14 +104,14 @@ const main = () => {
     });
   };
 
-  const renderIngredients = meals => {
-    const IngredientList = new TitleList(
-      "#ingredientList",
-      "ingredient-item",
-      meals,
-      "Ingedient Category"
-    );
-    IngredientList.renderItems();
+  const displayIngredients = () => {
+    // const IngredientList = new TitleList(
+    //   "#ingredientList",
+    //   "ingredient-item",
+    //   meals,
+    //   "Ingedient Category"
+    // );
+    // IngredientList.renderItems();
 
     const ingredientItemElement = document.querySelectorAll("#ingredientItem");
 
