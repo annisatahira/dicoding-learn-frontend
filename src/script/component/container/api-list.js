@@ -6,7 +6,6 @@ class DataApiList {
     this.value = url;
     this.listID = listID;
     this.listItem = listItem;
-    this.data = "responseJson.meals";
   }
 
   getList = async () => {
@@ -21,8 +20,8 @@ class DataApiList {
       }
       const dataList = await jsonData;
       this.renderList(dataList);
-    } catch (error) {
-      // this.showResponseMessage(error);
+    } catch (message) {
+      this.showResponseMessage(message);
     }
   };
 
@@ -31,7 +30,7 @@ class DataApiList {
     dataList.renderItems();
   }
 
-  showResponeMessage = (message = "Check Your Connection") => {
+  showResponseMessage = (message = "Check Your Connection") => {
     alert(message);
   };
 }

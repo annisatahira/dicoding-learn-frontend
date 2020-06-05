@@ -4,7 +4,6 @@ class PageList {
     console.log(this.value);
     this.getDetailList();
     this.renderDetailList();
-    this.showResponeMessage();
   }
 
   getDetailList = async () => {
@@ -56,7 +55,7 @@ class PageList {
     });
   };
 
-  showResponeMessage = (message = "Check Your Connection") => {
+  showResponseMessage = (message = "Check Your Connection") => {
     alert(message);
   };
 }

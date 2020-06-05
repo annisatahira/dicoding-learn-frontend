@@ -32,7 +32,7 @@ const main = () => {
       await slick();
       changeListCategory.changeList();
     } catch (message) {
-      showResponeMessage(message);
+      showResponseMessage(message);
     }
   };
 
@@ -46,7 +46,6 @@ const main = () => {
       await ingredientList.getList();
       await displayIngredients();
       changeListIngredient.changeList();
-      // changeListCategory();
     } catch (message) {
       showResponeMessage(message);
     }
@@ -56,6 +55,11 @@ const main = () => {
   const title = document.createElement("h1");
   title.innerHTML = `Meal Categories`;
   categoryTitle.appendChild(title);
+
+  const ingredientTitle = document.querySelector("#ingredientTitle");
+  const iTitle = document.createElement("h1");
+  iTitle.innerHTML = `Ingredient Categories`;
+  ingredientTitle.appendChild(title);
 
   const slick = () => {
     $("#categoryList").slick({
@@ -98,7 +102,7 @@ const main = () => {
     }
   };
 
-  const showResponeMessage = (message = "Check Your Connection") => {
+  const showResponseMessage = (message = "Check Your Connection") => {
     alert(message);
   };
 
@@ -147,18 +151,18 @@ const main = () => {
         "Area Categories"
       );
       await areaList.renderItems();
-      await pagination();
+      await pagination("area-item");
       changeListArea.changeList();
     } catch (message) {
       showResponeMessage(message);
     }
   };
 
-  const pagination = () => {
+  const pagination = item => {
     //
     //  get num of item and compute num of pages
     //
-    var nItem = $("area-item").length;
+    var nItem = $(item).length;
     var nPages = Math.ceil(nItem / $(".pagination").data("page-size"));
     //
     // save num pages as a data attribute of pagination element
@@ -229,8 +233,8 @@ const main = () => {
       //
       // toggle visibility
       //
-      $("area-item:visible").toggle(false);
-      $("area-item")
+      $(`${item}:visible`).toggle(false);
+      $(item)
         .slice(currentPageNumber * pageSize, (currentPageNumber + 1) * pageSize)
         .toggle(true);
     });
