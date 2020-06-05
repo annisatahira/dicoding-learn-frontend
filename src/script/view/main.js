@@ -148,7 +148,7 @@ const main = () => {
       );
       await areaList.renderItems();
       await pagination();
-      changeListArea();
+      changeListArea.changeList();
     } catch (message) {
       showResponeMessage(message);
     }
@@ -270,28 +270,6 @@ const main = () => {
   );
   videoList.renderItems();
 
-  const changeListArea = () => {
-    $(".changeListArea").click(function() {
-      const index = $(".changeListArea").index(this);
-      let element = document.querySelectorAll(".areaId");
-      let value = element[index].innerHTML;
-      let listArea = `a=${value}`;
-      localStorage.setItem("data", listArea);
-      $(location).attr("href", "list-page.html");
-    });
-  };
-
-  // const changeListCategory = () => {
-  //   $(".changeListCategory").click(function() {
-  //     const index = $(".changeListCategory").index(this);
-  //     let element = document.querySelectorAll(".categoryId");
-  //     let value = element[index].innerHTML;
-  //     let listCategory = `c=${value}`;
-  //     localStorage.setItem("data", listCategory);
-  //     $(location).attr("href", "list-page.html");
-  //   });
-  // };
-
   const changeListCategory = new ChangeList(
     ".changeListCategory",
     ".categoryId",
@@ -303,6 +281,8 @@ const main = () => {
     ".ingredientId",
     "i"
   );
+
+  const changeListArea = new ChangeList(".changeListArea", ".areaId", "a");
 
   getCategoryMeal();
   getIngredientsCategory();
