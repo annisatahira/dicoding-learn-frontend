@@ -1,6 +1,6 @@
 import List from "./list.js";
 
-class DataList {
+class DataApiList {
   constructor(keyword, listID, listItem) {
     const url = `https://www.themealdb.com/api/json/v1/1/${keyword}`;
     this.value = url;
@@ -36,4 +36,4 @@ class DataList {
   };
 }
 
-export default DataList;
+export default DataApiList;

@@ -17,22 +17,20 @@ import {
 
 import List from "../component/container/list.js";
 import TitleList from "../component/container/list-w-title.js";
-import PassValue from "./pass-value.js";
-import DataList from "../component/container/change-list-page.js";
+import DataApiList from "../component/container/api-list.js";
+import ChangeList from "../component/container/change-list.js";
 
 const main = () => {
-  const baseUrl = "https://www.themealdb.com/api/json/v1/1";
-
   const getCategoryMeal = async () => {
     try {
-      const categoryList = await new DataList(
+      const categoryList = await new DataApiList(
         "categories.php",
         "#categoryList",
         "category-item"
       );
       await categoryList.getList();
       await slick();
-      changeListCategory();
+      changeListCategory.changeList();
     } catch (message) {
       showResponeMessage(message);
     }
@@ -40,40 +38,24 @@ const main = () => {
 
   const getIngredientsCategory = async () => {
     try {
-      const ingredientList = await new DataList(
+      const ingredientList = await new DataApiList(
         "list.php?i=list",
         "#ingredientList",
         "ingredient-item"
       );
-      console.log(ingredientList);
       await ingredientList.getList();
-      displayIngredients();
+      await displayIngredients();
+      changeListIngredient.changeList();
       // changeListCategory();
     } catch (message) {
       showResponeMessage(message);
     }
   };
 
-  // const getIngredientsCategory = async () => {
-  //   try {
-  //     const response = await fetch(`${baseUrl}/list.php?i=list`);
-  //     const responseJson = await response.json();
-  //     await renderIngredients(responseJson.meals);
-  //     // changeList();
-  //   } catch (message) {
-  //     showResponeMessage(message);
-  //   }
-  // };
-
   const categoryTitle = document.querySelector("#categoryTitle");
   const title = document.createElement("h1");
   title.innerHTML = `Meal Categories`;
   categoryTitle.appendChild(title);
-
-  const renderAllCategoryMeals = categories => {
-    const categoryList = new List("#categoryList", "category-item", categories);
-    categoryList.renderItems();
-  };
 
   const slick = () => {
     $("#categoryList").slick({
@@ -105,14 +87,6 @@ const main = () => {
   };
 
   const displayIngredients = () => {
-    // const IngredientList = new TitleList(
-    //   "#ingredientList",
-    //   "ingredient-item",
-    //   meals,
-    //   "Ingedient Category"
-    // );
-    // IngredientList.renderItems();
-
     const ingredientItemElement = document.querySelectorAll("#ingredientItem");
 
     for (let i = 0; i < ingredientItemElement.length; i++) {
@@ -307,22 +281,28 @@ const main = () => {
     });
   };
 
-  const changeListCategory = () => {
-    $(".changeListCategory").click(function() {
-      const index = $(".changeListCategory").index(this);
-      let element = document.querySelectorAll(".categoryId");
-      let value = element[index].innerHTML;
-      let listCategory = `c=${value}`;
-      localStorage.setItem("data", listCategory);
-      $(location).attr("href", "list-page.html");
-    });
-  };
+  // const changeListCategory = () => {
+  //   $(".changeListCategory").click(function() {
+  //     const index = $(".changeListCategory").index(this);
+  //     let element = document.querySelectorAll(".categoryId");
+  //     let value = element[index].innerHTML;
+  //     let listCategory = `c=${value}`;
+  //     localStorage.setItem("data", listCategory);
+  //     $(location).attr("href", "list-page.html");
+  //   });
+  // };
 
-  // const changeListCategory = new ChangeList(
-  //   ".changeListCategory",
-  //   ".categoryId",
-  //   "c"
-  // );
+  const changeListCategory = new ChangeList(
+    ".changeListCategory",
+    ".categoryId",
+    "c"
+  );
+
+  const changeListIngredient = new ChangeList(
+    ".changeListIngredient",
+    ".ingredientId",
+    "i"
+  );
 
   getCategoryMeal();
   getIngredientsCategory();

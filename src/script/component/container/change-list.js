@@ -3,15 +3,18 @@ class ChangeList {
     this.listItem = listItem;
     this.listId = listId;
     this.selector = selector;
-    this.ChangeList();
   }
 
   changeList = () => {
-    $(`${this.listItem}`).click(function() {
-      const index = $(`${this.listItem}`).index(this);
-      let element = document.querySelectorAll(`${this.listId}`);
+    const _listItem = this.listItem;
+    const _listId = this.listId;
+    const _selector = this.selector;
+    console.log(_listItem);
+    $(_listItem).click(function() {
+      const index = $(_listItem).index(this);
+      let element = document.querySelectorAll(_listId);
       let value = element[index].innerHTML;
-      let listData = `${this.selector}=${value}`;
+      let listData = `${_selector}=${value}`;
       localStorage.setItem("data", listData);
       $(location).attr("href", "list-page.html");
     });
