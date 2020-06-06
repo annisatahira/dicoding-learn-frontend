@@ -44,17 +44,17 @@ class PageDetail {
                 <div class="col s12">
                   <ul class="tabs">
                     <li class="tab col s6 m6 l6">
-                      <a href="#test1">Instruction</a>
+                      <a href="#instruction">Instruction</a>
                     </li>
-                    <li class="tab col s6 m6 l6"><a href="#test2">Ingredients</a></li>
+                    <li class="tab col s6 m6 l6"><a href="#ingredients">Ingredients</a></li>
                   </ul>
                 </div>
-                <div id="test1" class="col s12 scrollable">
+                <div id="instruction" class="col s12 scrollable">
                   <p>
                     ${meal.strInstructions}
                   </p>
                 </div>
-                <div id="test2" class="col s12 l12 scrollable">
+                <div id="ingredients" class="col s12 l12 scrollable">
                 <table>
                 <thead>
                   <tr>

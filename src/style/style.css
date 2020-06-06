@@ -119,10 +119,18 @@ li {
 }
 #itemContent img {
   padding-top: 30px;
-  height: 150px;
+  height: 350px;
   margin: 0 auto;
 }
 
+#itemContent h4,
+h5 {
+  font-size: 20px !important;
+}
+
+#itemContent h5 {
+  font-size: 15px !important;
+}
 #ingredientItem a {
   color: black;
 }
