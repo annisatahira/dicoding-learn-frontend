@@ -1,3 +1,6 @@
+import "../component/app-bar.js";
+import "../component/footer.js";
+
 import "../component/category-item.js";
 import "../component/banner-item.js";
 import "../component/text-item.js";
@@ -18,7 +21,7 @@ import {
 import List from "../component/container/list.js";
 import TitleList from "../component/container/list-w-title.js";
 import DataApiList from "../component/container/api-list.js";
-import ChangeList from "../component/container/change-list.js";
+import ChangeList from "../action/change-list.js";
 
 const main = () => {
   const getCategoryMeal = async () => {
@@ -302,4 +305,4 @@ const main = () => {
   // passValueSearch()
 };
 
-export default main;
+document.addEventListener("DOMContentLoaded", main());
