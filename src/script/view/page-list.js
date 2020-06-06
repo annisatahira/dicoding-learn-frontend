@@ -1,4 +1,6 @@
-import "../component/area-item.js";
+import "../component/app-bar.js";
+import "../component/footer.js";
+
 import PageList from "../component/container/page-list.js";
 import PageDetail from "../component/page-detail.js";
 
@@ -33,4 +35,4 @@ const main = () => {
   setValue();
 };
 
-export default main;
+document.addEventListener("DOMContentLoaded", main());
