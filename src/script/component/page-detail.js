@@ -26,26 +26,135 @@ class PageDetail {
           <span class="closebtn" title="Close Overlay">×</span>
           <div id="itemContent" class="card">
             <div class="row">
-              <div class="col l12">
+              <div class="col s12 m5 l5">
                 <img src=${meal.strMealThumb} />
-                <h1>${meal.strMeal}</h1>
-                <p>
-                  We illustrate sufficiently by taking three particularly
-                  heterogeneous items from the total ... in (1) only need
-                  division by the number of items, without change in the ratio.
-                  The separate price sums are clearly not invariant to changes
-                  in units. ... With our three heterogeneous items as an
-                  example, we construct the table on page 14.
-                </p>
+                <h4>${meal.strMeal}</h4>
+                <br />
+                <div class="col m6 l6 border-right">
+                  <h5>${meal.strArea}<h5>
+                </div>
+                <div class="col m6 l6">
+                  <h5>${meal.strCategory}<h5>
+                </div>
+                <div class="col s12 m12 l12">
+                  <h5 style="padding-top:20px;"><a href=${meal.strYoutube}>Click to Watch Video</a></h5>
+                </div>
               </div>
-              <ul id="tabs-swipe-demo" class="tabs">
-              <li class="tab col s3"><a href="#swipe-1">Test 1</a></li>
-              <li class="tab col s3"><a class="active" href="#swipe-2">Test 2</a></li>
-              <li class="tab col s3"><a href="#swipe-3">Test 3</a></li>
-            </ul>
-            <div id="swipe-1" class="col s12 blue content">First tab content</div>
-            <div id="swipe-2" class="col s12 red content">Second tab content</div>
-            <div id="swipe-3" class="col s12 green content">Third tab content</div>
+              <div class="col s12 m7 l7">
+                <div class="col s12">
+                  <ul class="tabs">
+                    <li class="tab col s6 m6 l6">
+                      <a href="#test1">Instruction</a>
+                    </li>
+                    <li class="tab col s6 m6 l6"><a href="#test2">Ingredients</a></li>
+                  </ul>
+                </div>
+                <div id="test1" class="col s12 scrollable">
+                  <p>
+                    ${meal.strInstructions}
+                  </p>
+                </div>
+                <div id="test2" class="col s12 l12 scrollable">
+                <table>
+                <thead>
+                  <tr>
+                      <th>Ingredient</th>
+                      <th>Measure</th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr>
+                    <td>${meal.strIngredient1}</td>
+                    <td>${meal.strMeasure1}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient2}</td>
+                    <td>${meal.strMeasure2}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient3}</td>
+                    <td>${meal.strMeasure3}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient4}</td>
+                    <td>${meal.strMeasure4}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient5}</td>
+                    <td>${meal.strMeasure5}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient6}</td>
+                    <td>${meal.strMeasure6}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient7}</td>
+                    <td>${meal.strMeasure7}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient8}</td>
+                    <td>${meal.strMeasure8}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient9}</td>
+                    <td>${meal.strMeasure9}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient10}</td>
+                    <td>${meal.strMeasure10}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient11}</td>
+                    <td>${meal.strMeasure11}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient12}</td>
+                    <td>${meal.strMeasure12}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient13}</td>
+                    <td>${meal.strMeasure13}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient14}</td>
+                    <td>${meal.strMeasure14}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient15}</td>
+                    <td>${meal.strMeasure15}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient16}</td>
+                    <td>${meal.strMeasure16}</td>
+                </tr>
+                  <tr>
+                    <td>${meal.strIngredient17}</td>
+                    <td>${meal.strMeasure17}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient18}</td>
+                    <td>${meal.strMeasure18}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient19}</td>
+                    <td>${meal.strMeasure19}</td>
+                  </tr>
+                  <tr>
+                    <td>${meal.strIngredient20}</td>
+                    <td>${meal.strMeasure20}</td>
+                  </tr>
+                </tbody>
+              </table>
+                </div>
+
+                <div id="test4" class="col s12 scrollable">
+                  <h1>Belaja PHP</h1>
+                  <p>
+                    Kodingin merupakan situs yang berisi mengenai artikel PHP
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -54,9 +163,7 @@ class PageDetail {
   };
 
   tabFunction = () => {
-    $(".tabs").tabs({
-      swipeable: true
-    });
+    $(".tabs").tabs({});
   };
 
   showDetail = () => {

@@ -93,14 +93,18 @@ nav {
 #itemContent {
   position: relative;
   top: 10%;
-  width: 60%;
+  width: 80%;
   height: 80%;
   text-align: center;
   margin-top: 30px;
   margin: auto;
   padding: 20px;
   z-index: 1;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+h4 {
+  font-weight: bold !important;
 }
 
 .scrollable {
@@ -109,9 +113,13 @@ nav {
   overflow-x: hidden;
 }
 
+.scrollable p,
+li {
+  line-height: 1.9;
+}
 #itemContent img {
   padding-top: 30px;
-  height: 200px;
+  height: 150px;
   margin: 0 auto;
 }
 
@@ -128,7 +136,7 @@ nav {
 #overlayItem {
   height: 100%;
   width: 100%;
-  display: block;
+  display: none;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -157,4 +165,18 @@ ol {
 
 .border-right {
   border-right: 1px solid black;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: #d65755f0 !important;
+  color: white;
+}
+
+.tabs .tab a {
+  font-weight: bold !important;
+}
+
+tr {
+  border-bottom: none !important;
 }
