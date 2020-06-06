@@ -12,13 +12,13 @@ class AppBar extends HTMLElement {
   getSearch = async () => {
     try {
       await this.render();
-      this.openSearch();
+      this.toggleSearch();
     } catch (error) {
       //   this.showResponseMessage(error);
     }
   };
 
-  openSearch = () => {
+  toggleSearch = () => {
     this.shadowDOM
       .querySelector(".openInputSearch")
       .addEventListener("click", () => {
@@ -27,6 +27,18 @@ class AppBar extends HTMLElement {
     this.shadowDOM.querySelector(".closebtn").addEventListener("click", () => {
       this.shadowDOM.querySelector(".overlay").style.display = "none";
     });
+    this.passValueSearch();
+  };
+
+  passValueSearch = () => {
+    this.shadowDOM
+      .querySelector("#searchButtonElement")
+      .addEventListener("click", () => {
+        const keyword = this.shadowDOM.getElementById("keywordSearch").value;
+        console.log(keyword);
+        localStorage.setItem("searchValue", keyword);
+        return false;
+      });
   };
 
   render() {
@@ -158,15 +170,16 @@ class AppBar extends HTMLElement {
       <div id="searchOverlay" class="overlay">
         <span class="closebtn">×</span>
           <div class="overlay-content">
-            <form action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search" />
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <form action="page-result.html">
+            <input type="text" id="keywordSearch" placeholder="Search.." name="search" />
+            <button id="searchButtonElement" type="submit"><i class="fa fa-search"></i></button>
           </form>
         </div>
       </div>
       <a href="index.html" class="logo">COOKA</a>
       <div class="search-wrapper">
         <input
+          id="searchElement"
           type="text"
           placeholder="Search All Recipe You Want"
           class="openInputSearch"

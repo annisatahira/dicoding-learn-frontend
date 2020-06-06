@@ -11,24 +11,6 @@ const main = () => {
     } catch (error) {}
   };
 
-  // $(".tabs").tabs({});
-  // const hideNullItem = () => {
-  //   const liElement = document.querySelectorAll("li");
-
-  //   for (let i = 0; i < liElement.length; i++) {
-  //     liElement[i].style.display = "none";
-  //   }
-
-  //   for (let i = 0; i < liElement.length; i++) {
-  //     if (liElement[i].innerText == "") {
-  //       liElement[i].style.display = "none";
-  //     } else {
-  //       liElement[i].style.display = "block";
-  //     }
-  //   }
-  // };
-
-  // hideNullItem();
   const setIdDetail = () => {
     $("#detailList").on("click", ".item", function() {
       const index = $(this).index(".item");
@@ -47,11 +29,8 @@ const main = () => {
     });
   };
   setIdDetail();
-  getIdDetail(); // getDetailPage();
-
+  getIdDetail();
   setValue();
-  // getDetailPage();
-  // getIdDetail();
 };
 
 export default main;
