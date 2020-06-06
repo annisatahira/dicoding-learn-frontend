@@ -103,9 +103,15 @@ nav {
   overflow-x: hidden;
 }
 
+.scrollable {
+  height: 500px;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
 #itemContent img {
   padding-top: 30px;
-  height: 300px;
+  height: 200px;
   margin: 0 auto;
 }
 
@@ -147,4 +153,8 @@ nav {
 
 ol {
   text-align: left;
+}
+
+.border-right {
+  border-right: 1px solid black;
 }
