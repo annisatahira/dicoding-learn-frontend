@@ -54,7 +54,7 @@ class AppBar extends HTMLElement {
         color: white;
         font-weight: bolder;
         font-family: "Pacifico", cursive;
-        font-size: 25px;
+        font-size: 20px;
         padding: 20px;
         background: #ef5350;
         text-decoration: none;
@@ -65,7 +65,7 @@ class AppBar extends HTMLElement {
       
       .search-wrapper {
         position: absolute;
-        top: 35px;
+        top: 15px;
         right: 20px;
         box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
         border-radius: 20px;
@@ -76,10 +76,10 @@ class AppBar extends HTMLElement {
       
       .search-wrapper input[type="text"] {
         padding: 15px;
-        font-size: 15px;
+        font-size: 13px;
         border: none;
         float: left;
-        width: 90%;
+        width: 80%;
         background: transparent;
         border-radius: 20px 0px 0px 20px;
         outline: 0;
@@ -91,10 +91,10 @@ class AppBar extends HTMLElement {
       
       .search-wrapper button {
         float: left;
-        width: 10%;
-        padding: 14px;
+        width: 20%;
+        padding: 8px;
         background: #ef5350;
-        font-size: 17px;
+        font-size: 15px;
         border: none;
         cursor: pointer;
         border-radius: 20px 20px 20px 20px;
@@ -165,6 +165,35 @@ class AppBar extends HTMLElement {
       
       .overlay .fa {
         color: #ef5350 !important;
+      }
+
+      @media only screen and (min-width: 992px) {
+        .logo {
+          font-size: 25px;
+        }
+
+        .search-wrapper {
+          top: 35px;
+        }
+
+        .search-wrapper button {
+          float: left;
+          width: 10%;
+          padding: 14px;
+          background: #ef5350;
+          font-size: 17px;
+          border: none;
+          cursor: pointer;
+          border-radius: 20px 20px 20px 20px;
+          outline: 0;
+        }
+
+
+        .search-wrapper input[type="text"] {
+          padding: 15px;
+          font-size: 15px;
+          width: 90%;
+        }
       }
     </style>
       <div id="searchOverlay" class="overlay">

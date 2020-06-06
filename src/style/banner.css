@@ -8,7 +8,7 @@ banner-item {
 }
 
 banner-item > img {
-  max-height: 720px;
+  height: 480px;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -16,8 +16,9 @@ banner-item > img {
 
 .text-banner {
   position: absolute;
-  bottom: 50%;
-  right: 10%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .text-banner h1,
@@ -30,4 +31,23 @@ p {
   font-size: 45px;
   color: #ef5350;
   font-weight: bold;
+}
+
+@media only screen and (min-width: 992px) {
+  banner-item > img {
+    height: 540px;
+  }
+
+  .text-banner h1,
+  p {
+    text-align: center;
+    font-size: 45px;
+  }
+}
+
+/* EXTRA LARGE SCREEN */
+@media only screen and (min-width: 1200px) {
+  banner-item > img {
+    height: 720px;
+  }
 }

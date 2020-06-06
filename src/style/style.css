@@ -6,6 +6,8 @@
 @import "category.css";
 @import "testimoni.css";
 @import "custom-materialize.css";
+@import "list-detail.css";
+@import "item-detail.css";
 
 body {
   font-family: "Quicksand", "Times New Roman", Times, serif;
@@ -17,30 +19,20 @@ body {
   box-sizing: border-box;
 }
 
-/* header */
 header {
   padding-bottom: 0;
   margin: 0;
-  /* remove gap between beacuse inline */
   font-size: 0;
 }
 
-#bread {
-  padding: 50px;
-}
-
-.breadcrumb {
-  color: teal !important;
-}
-
 main {
-  padding: 30px 200px;
   margin: 0;
+  padding: 20px;
 }
 
 main h1 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 30px;
+  font-family: "Cambria", "Cochin", "Georgia", "Times New Roman", serif;
+  font-size: 20px;
   padding: 20px;
   font-weight: bold;
 }
@@ -48,6 +40,7 @@ main h1 {
 p {
   text-align: left;
   line-height: 1.5em;
+  font-size: 15px;
 }
 
 .show-more {
@@ -68,123 +61,45 @@ h6 {
   display: none;
 }
 
-category-item {
-  cursor: pointer;
-  outline: 0;
-}
-
 nav {
   background-color: #ef5350 !important;
 }
 
-#detailList {
-  padding-top: 30px;
-}
-
-#detailList img {
-  height: 200px;
-  margin: 0 auto;
-}
-
-#detailList h1 {
-  margin: 0;
-}
-
-#itemContent {
-  position: relative;
-  top: 10%;
-  width: 80%;
-  height: 80%;
-  text-align: center;
-  margin-top: 30px;
-  margin: auto;
-  padding: 20px;
-  z-index: 1;
-  overflow: hidden;
-}
-
-h4 {
-  font-weight: bold !important;
-}
-
-.scrollable {
-  height: 500px;
-  z-index: 1;
-  overflow-x: hidden;
-}
-
-.scrollable p,
-li {
-  line-height: 1.9;
-}
-#itemContent img {
-  padding-top: 30px;
-  height: 350px;
-  margin: 0 auto;
-}
-
-#itemContent h4,
-h5 {
-  font-size: 20px !important;
-}
-
-#itemContent h5 {
-  font-size: 15px !important;
-}
-#ingredientItem a {
-  color: black;
-}
-
-#ingredientItem a:hover {
-  color: #ef5350;
-  font-weight: bold;
+.col {
   cursor: pointer;
 }
 
-#overlayItem {
-  height: 100%;
-  width: 100%;
-  display: none;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(167, 167, 167);
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow-x: hidden;
+@media only screen and (min-width: 992px) {
+  main {
+    padding: 30px 200px;
+  }
+
+  main h1 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
 }
 
-#overlayItem .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-  cursor: pointer;
-  color: white;
+@media only screen and (min-width: 992px) {
+  main {
+    padding: 30px 100px;
+  }
+
+  main h1 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
 }
 
-#overlayItem .closebtn:hover {
-  color: #ccc;
-}
-
-ol {
-  text-align: left;
-}
-
-.border-right {
-  border-right: 1px solid black;
-}
-
-.tabs .tab a:focus,
-.tabs .tab a:focus.active {
-  background-color: #d65755f0 !important;
-  color: white;
-}
-
-.tabs .tab a {
-  font-weight: bold !important;
-}
-
-tr {
-  border-bottom: none !important;
+/* EXTRA LARGE SCREEN */
+@media only screen and (min-width: 1200px) {
+  main {
+    padding: 30px 200px;
+  }
 }

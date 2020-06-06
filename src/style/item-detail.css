@@ -1,0 +1,84 @@
+#itemContent {
+  position: relative;
+  top: 10%;
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+  padding: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+h4 {
+  font-weight: bold !important;
+}
+
+.scrollable {
+  height: 500px;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.scrollable p,
+li {
+  line-height: 1.9;
+}
+#itemContent img {
+  padding-top: 30px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+#itemContent h4,
+h5 {
+  font-size: 20px !important;
+}
+
+#itemContent h5 {
+  font-size: 15px !important;
+}
+#ingredientItem a {
+  color: black;
+}
+
+#ingredientItem a:hover {
+  color: #ef5350;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#overlayItem {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(167, 167, 167);
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+}
+
+#overlayItem .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+#overlayItem .closebtn:hover {
+  color: #ccc;
+}
+
+ol {
+  text-align: left;
+}
+
+.border-right {
+  border-right: 1px solid black;
+}

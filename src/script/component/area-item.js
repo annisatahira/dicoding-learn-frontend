@@ -6,7 +6,7 @@ class AreaItem extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <div class="col s12 m6 l3 changeListArea">
+    <div class="col s6 m6 l3 changeListArea">
     <div class="card">
       <div class="card-image">
         <img

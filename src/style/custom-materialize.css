@@ -1,16 +1,21 @@
 .card > img {
-  height: 200px;
+  height: 100px;
   width: 100%;
   object-fit: cover;
   object-position: top;
 }
 
 .card .card-content {
-  padding: 10px !important;
+  padding: 5px !important;
 }
 
 .btn-floating i {
   font-size: 0.75rem !important;
+}
+
+.card .card-title {
+  font-size: 18px !important;
+  text-align: center;
 }
 
 .slick-next:before,
@@ -26,4 +31,39 @@
 
 li.active {
   background-color: teal !important;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: #d65755f0 !important;
+  color: white;
+}
+
+.tabs .tab a {
+  font-weight: bold !important;
+}
+
+tr {
+  border-bottom: none !important;
+}
+
+.breadcrumb {
+  color: teal !important;
+}
+
+/* Desktop Or Laptop */
+
+@media only screen and (min-width: 992px) {
+  .card > img {
+    height: 200px;
+    width: 100%;
+  }
+
+  .card .card-content {
+    padding: 10px !important;
+  }
+
+  .card .card-title {
+    font-size: 24px !important;
+  }
 }
