@@ -23,7 +23,7 @@ class PageDetail {
     meals.forEach(meal => {
       detailItemElement.innerHTML += `
       <div id="overlayItem">
-          <span class="closebtn" title="Close Overlay">×</span>
+          <span class="closebtn" title="Close Meal">×</span>
           <div id="itemContent" class="card">
             <div class="row">
               <div class="col s12 m5 l5">
@@ -43,16 +43,11 @@ class PageDetail {
               <div class="col s12 m7 l7">
                 <div class="col s12">
                   <ul class="tabs">
+                    <li class="tab col s6 m6 l6"><a href="#ingredients">Ingredients</a></li>
                     <li class="tab col s6 m6 l6">
                       <a href="#instruction">Instruction</a>
                     </li>
-                    <li class="tab col s6 m6 l6"><a href="#ingredients">Ingredients</a></li>
                   </ul>
-                </div>
-                <div id="instruction" class="col s12 scrollable">
-                  <p>
-                    ${meal.strInstructions}
-                  </p>
                 </div>
                 <div id="ingredients" class="col s12 l12 scrollable">
                 <table>
@@ -147,11 +142,9 @@ class PageDetail {
                 </tbody>
               </table>
                 </div>
-
-                <div id="test4" class="col s12 scrollable">
-                  <h1>Belaja PHP</h1>
+                <div id="instruction" class="col s12 scrollable">
                   <p>
-                    Kodingin merupakan situs yang berisi mengenai artikel PHP
+                    ${meal.strInstructions}
                   </p>
                 </div>
               </div>

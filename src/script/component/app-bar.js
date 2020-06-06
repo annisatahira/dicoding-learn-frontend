@@ -5,8 +5,29 @@ class AppBar extends HTMLElement {
   }
 
   connectedCallback() {
-    this.render();
+    // this.render();
+    this.getSearch();
   }
+
+  getSearch = async () => {
+    try {
+      await this.render();
+      this.openSearch();
+    } catch (error) {
+      //   this.showResponseMessage(error);
+    }
+  };
+
+  openSearch = () => {
+    this.shadowDOM
+      .querySelector(".openInputSearch")
+      .addEventListener("click", () => {
+        this.shadowDOM.querySelector(".overlay").style.display = "block";
+      });
+    this.shadowDOM.querySelector(".closebtn").addEventListener("click", () => {
+      this.shadowDOM.querySelector(".overlay").style.display = "none";
+    });
+  };
 
   render() {
     const styles = document.querySelector('link[href*="fontawesome"]');
@@ -134,21 +155,21 @@ class AppBar extends HTMLElement {
         color: #ef5350 !important;
       }
     </style>
-    <div id="searchOverlay" class="overlay">
-      <span class="closebtn" onclick="closeSearch()">×</span>
-        <div class="overlay-content">
-          <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search" />
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
+      <div id="searchOverlay" class="overlay">
+        <span class="closebtn">×</span>
+          <div class="overlay-content">
+            <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
       </div>
-    </div>
       <a href="index.html" class="logo">COOKA</a>
       <div class="search-wrapper">
         <input
           type="text"
-          onclick="openSearch()"
           placeholder="Search All Recipe You Want"
+          class="openInputSearch"
         />
         <button type="submit"><i class="fa fa-search"></i></button>
       </div>`;
