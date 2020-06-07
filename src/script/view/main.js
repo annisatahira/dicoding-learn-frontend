@@ -1,3 +1,5 @@
+import $ from "jquery";
+import "slick-carousel";
 import "../component/category-item.js";
 import "../component/banner-item.js";
 import "../component/text-item.js";
@@ -47,7 +49,7 @@ const main = () => {
       await displayIngredients();
       changeListIngredient.changeList();
     } catch (message) {
-      showResponeMessage(message);
+      showResponseMessage(message);
     }
   };
 
@@ -155,7 +157,7 @@ const main = () => {
       await pagination("area-item");
       changeListArea.changeList();
     } catch (message) {
-      showResponeMessage(message);
+      showResponseMessage(message);
     }
   };
 

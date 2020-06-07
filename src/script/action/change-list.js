@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 class ChangeList {
   constructor(listItem, listId, selector) {
     this.listItem = listItem;
