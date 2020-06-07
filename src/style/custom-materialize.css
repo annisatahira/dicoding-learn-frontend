@@ -43,14 +43,6 @@ li.active {
   font-weight: bold !important;
 }
 
-tr {
-  border-bottom: none !important;
-}
-
-.breadcrumb {
-  color: teal !important;
-}
-
 /* Desktop Or Laptop */
 
 @media only screen and (min-width: 992px) {
