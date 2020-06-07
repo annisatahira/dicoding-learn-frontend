@@ -1,6 +1,3 @@
-import "../component/app-bar.js";
-import "../component/footer.js";
-
 import "../component/category-item.js";
 import "../component/banner-item.js";
 import "../component/text-item.js";
@@ -301,4 +298,4 @@ const main = () => {
   getAreaList();
 };
 
-document.addEventListener("DOMContentLoaded", main());
+export default main();

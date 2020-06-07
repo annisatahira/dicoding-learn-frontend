@@ -5,7 +5,7 @@ class ChangeList {
     this.selector = selector;
   }
 
-  changeList = () => {
+  changeList() {
     const _listItem = this.listItem;
     const _listId = this.listId;
     const _selector = this.selector;
@@ -16,9 +16,9 @@ class ChangeList {
       let value = element[index].innerHTML;
       let listData = `${_selector}=${value}`;
       localStorage.setItem("data", listData);
-      $(location).attr("href", "page-list.html");
+      $(location).attr("href", "pageList.html");
     });
-  };
+  }
 }
 
 export default ChangeList;
