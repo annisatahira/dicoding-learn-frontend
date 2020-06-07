@@ -100,28 +100,28 @@ class PageDetail {
                     <td>${meal.strMeasure10}</td>
                   </tr>
                   <tr>
-                    <td>${meal.strIngredient11}</td>
-                    <td>${meal.strMeasure11}</td>
+                    <td class="empty">${meal.strIngredient11}</td>
+                    <td class="empty">${meal.strMeasure11}</td>
                   </tr>
                   <tr>
-                    <td>${meal.strIngredient12}</td>
-                    <td>${meal.strMeasure12}</td>
+                    <td class="empty">${meal.strIngredient12}</td>
+                    <td class="empty">${meal.strMeasure12}</td>
                   </tr>
                   <tr>
-                    <td>${meal.strIngredient13}</td>
-                    <td>${meal.strMeasure13}</td>
+                    <td class="empty">${meal.strIngredient13}</td>
+                    <td class="empty">${meal.strMeasure13}</td>
                   </tr>
                   <tr>
-                    <td>${meal.strIngredient14}</td>
-                    <td>${meal.strMeasure14}</td>
+                    <td class="empty">${meal.strIngredient14}</td>
+                    <td class="empty">${meal.strMeasure14}</td>
                   </tr>
                   <tr>
-                    <td>${meal.strIngredient15}</td>
-                    <td>${meal.strMeasure15}</td>
+                    <td class="empty">${meal.strIngredient15}</td>
+                    <td class="empty">${meal.strMeasure15}</td>
                   </tr>
                   <tr>
-                    <td>${meal.strIngredient16}</td>
-                    <td>${meal.strMeasure16}</td>
+                    <td class="empty">${meal.strIngredient16}</td>
+                    <td class="empty">${meal.strMeasure16}</td>
                 </tr>
                   <tr>
                     <td>${meal.strIngredient17}</td>
@@ -157,6 +157,19 @@ class PageDetail {
 
   tabFunction = () => {
     $(".tabs").tabs({});
+    this.hideCellIfEmpty();
+  };
+
+  hideCellIfEmpty = () => {
+    const ingredientItemElement = document.querySelectorAll("td");
+
+    for (let i = 0; i < ingredientItemElement.length; i++) {
+      if (
+        ingredientItemElement[i].innerText === "null" ||
+        ingredientItemElement[i].innerText === ""
+      )
+        $(ingredientItemElement[i]).hide();
+    }
   };
 
   showDetail = () => {
