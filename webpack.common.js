@@ -2,11 +2,20 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    index: "./src/index.js",
+    pageList: "./src/page-list.js"
+    // resultApp: "./src/view/page-result.js"
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js"
+    filename: "[name].js"
   },
+  //   entry: "./src/index.js",
+  //   output: {
+  //     path: path.resolve(__dirname, "dist"),
+  //     filename: "bundle.js"
+  //   },
   module: {
     rules: [
       /* style and css loader */
@@ -52,7 +61,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      filename: "index.html"
+      filename: "index.html",
+      chunks: ["index"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pageList.html",
+      filename: "pageList.html",
+      chunks: ["pageList"]
     })
   ]
 };
