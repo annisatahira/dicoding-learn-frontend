@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -6,17 +7,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
-
-  mode: "production",
-  // entry: {
-  //   app: "./src/view/index.js",
-  //   listApp: "./src/view/page-list.js",
-  //   resultApp: "./src/view/page-result.js"
-  // },
-  // output: {
-  //   filename: "[name].js",
-  //   path: __dirname + "/dist"
-  // },
   module: {
     rules: [
       /* style and css loader */
@@ -40,7 +30,6 @@ module.exports = {
             loader: "babel-loader",
             options: {
               presets: [
-                "@babel/preset-env",
                 { plugins: ["@babel/plugin-proposal-class-properties"] }
               ]
             }
@@ -59,20 +48,11 @@ module.exports = {
         }
       }
     ]
-  }
-
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     template: "./src/index.html",
-  //     filename: "index.html"
-  //   }),
-  //   new HtmlWebpackPlugin({
-  //     template: "./src/pageList.html",
-  //     filename: "pageList.html"
-  //   }),
-  //   new HtmlWebpackPlugin({
-  //     template: "./src/pageResult.html",
-  //     filename: "pageResult.html"
-  //   })
-  // ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "index.html"
+    })
+  ]
 };

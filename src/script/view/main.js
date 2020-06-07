@@ -265,7 +265,7 @@ const main = () => {
   testimoniList.renderItems();
 
   $("#testimoniList").slick({
-    dots: true,
+    dots: false,
     fade: true,
     cssEase: "linear",
     autoplay: true,
