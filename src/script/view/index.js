@@ -154,11 +154,16 @@ const main = () => {
         "Area Categories"
       );
       await areaList.renderItems();
+      await showPagination();
       await pagination("area-item");
       changeListArea.changeList();
     } catch (message) {
       showResponeMessage(message);
     }
+  };
+
+  const showPagination = () => {
+    $(".pagination").css("display", "block");
   };
 
   const pagination = item => {

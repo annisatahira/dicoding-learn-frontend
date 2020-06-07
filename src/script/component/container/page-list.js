@@ -41,7 +41,7 @@ class PageList {
         transform: translate(-50%, -50%);
       }
       </style>
-      <div class="col s12 m6 l4 listItem">
+      <div class="col s12 m6 l3 listItem">
         <div class="card item">
           <div class="card-image">
             <img src=${meal.strMealThumb}>

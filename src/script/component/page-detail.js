@@ -26,21 +26,21 @@ class PageDetail {
           <span class="closebtn" title="Close Meal">×</span>
           <div id="itemContent" class="card">
             <div class="row">
-              <div class="col s12 m5 l5">
+              <div class="col s12 m12 l5">
                 <img src=${meal.strMealThumb} />
                 <h4>${meal.strMeal}</h4>
                 <br />
-                <div class="col m6 l6 border-right">
+                <div class="col s6 m6 l6 border-right">
                   <h5>${meal.strArea}<h5>
                 </div>
-                <div class="col m6 l6">
+                <div class="col s6 m6 l6">
                   <h5>${meal.strCategory}<h5>
                 </div>
                 <div class="col s12 m12 l12">
                   <h5 style="padding-top:20px;"><a href=${meal.strYoutube}>Click to Watch Video</a></h5>
                 </div>
               </div>
-              <div class="col s12 m7 l7">
+              <div class="col s12 m12 l7">
                 <div class="col s12">
                   <ul class="tabs">
                     <li class="tab col s6 m6 l6"><a href="#ingredients">Ingredients</a></li>

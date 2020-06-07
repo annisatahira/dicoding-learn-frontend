@@ -9,9 +9,11 @@
 @import "list-detail.css";
 @import "item-detail.css";
 
+html,
 body {
   font-family: "Quicksand", "Times New Roman", Times, serif;
   padding: 0;
+  height: 100%;
   margin: 0;
 }
 
@@ -68,18 +70,16 @@ nav {
 .col {
   cursor: pointer;
 }
+.wrapper {
+  min-height: 70%;
+}
+.footer {
+  height: 30%;
+}
 
-@media only screen and (min-width: 992px) {
-  main {
-    padding: 30px 200px;
-  }
-
+@media only screen and (min-width: 500px) {
   main h1 {
-    font-size: 30px;
-  }
-
-  p {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
@@ -102,4 +102,8 @@ nav {
   main {
     padding: 30px 200px;
   }
+}
+
+.pagination {
+  display: none;
 }

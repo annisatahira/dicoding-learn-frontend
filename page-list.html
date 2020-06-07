@@ -28,22 +28,19 @@
     />
   </head>
   <body>
-    <header>
-      <nav>
-        <app-bar></app-bar>
-      </nav>
-      <div id="bread" class="col s12">
-        <a href="#!" class="breadcrumb">First</a>
-        <a href="#!" class="breadcrumb">Second</a>
-        <a href="#!" class="breadcrumb">Third</a>
-      </div>
-    </header>
-    <main>
-      <div id="detailList" class="row"></div>
-      <div id="detailItem"></div>
-    </main>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <app-bar></app-bar>
+        </nav>
+      </header>
+      <main>
+        <div id="detailList" class="row"></div>
+        <div id="detailItem"></div>
+      </main>
+    </div>
     <footer>
-      <app-footer></app-footer>
+      <app-footer class="footer"></app-footer>
     </footer>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>

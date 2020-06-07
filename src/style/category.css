@@ -6,9 +6,9 @@ figure {
 }
 
 figure img {
-  height: 100px;
   object-position: center;
   margin: 0 auto;
+  height: 100px;
 }
 
 figcaption {
@@ -30,5 +30,13 @@ category-item {
 @media only screen and (min-width: 992px) {
   figcaption {
     font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  figure img {
+    height: 70px;
+    object-position: center;
+    margin: 0 auto;
   }
 }
