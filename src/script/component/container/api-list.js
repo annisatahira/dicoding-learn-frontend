@@ -9,11 +9,6 @@ class DataApiList {
   }
 
   getList = async () => {
-    // return fetch(`${this.value}`)
-    // .then(response => {
-    //   return response,json();
-    // })
-    // .then
     try {
       const response = await fetch(`${this.value}`);
       const responseJson = await response.json();

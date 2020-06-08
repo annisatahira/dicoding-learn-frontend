@@ -7,13 +7,13 @@ import "../component/learn-item.js";
 import "../component/area-item.js";
 import "../component/video-item.js";
 import "../component/ingredient-item.js";
-import "../component/testimoni-item.js";
+import "../component/quote-item.js";
 import {
   banners,
   about,
   learns,
   areas,
-  testimonials,
+  quotes,
   videos
 } from "../data/data-app.js";
 
@@ -251,20 +251,20 @@ const main = () => {
     $(".pagination li.active a").trigger("click");
   };
 
-  const TestimoniTitle = document.querySelector("#testimoniTitle");
-  const tTitle = document.createElement("h1");
-  tTitle.innerHTML = `Testimonials`;
-  TestimoniTitle.appendChild(tTitle);
+  const quoteTitle = document.querySelector("#quoteTitle");
+  const qTitle = document.createElement("h1");
+  qTitle.innerHTML = `Quote's About Cooking`;
+  quoteTitle.appendChild(qTitle);
 
-  const testimoniList = new List(
-    "#testimoniList",
-    "testimoni-item",
-    testimonials
+  const quoteList = new List(
+    "#quoteList",
+    "quote-item",
+    quotes
   );
 
-  testimoniList.renderItems();
+  quoteList.renderItems();
 
-  $("#testimoniList").slick({
+  $("#quoteList").slick({
     dots: false,
     fade: true,
     cssEase: "linear",
@@ -277,7 +277,7 @@ const main = () => {
     "#videoList",
     "video-item",
     videos,
-    "Cooking Video"
+    "Recommended Cooking Video"
   );
   videoList.renderItems();
 

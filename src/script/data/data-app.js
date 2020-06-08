@@ -192,20 +192,26 @@ const areas = [
   }
 ];
 
-const testimonials = [
+const quotes = [
   {
-    tName: "Annisa",
-    tImg:
-      "https://avatars2.githubusercontent.com/u/36753796?s=460&u=f8bcdc42177463d700a934e2c4800093c65063fd&v=4",
+    tName: " — Craig Claiborne",
     tSay:
-      "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakayang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menj."
+      "Cooking is at once child’s play and adult joy. And cooking done with care is an act of love."
   },
   {
-    tName: "Tahira",
-    tImg:
-      "https://avatars2.githubusercontent.com/u/36753796?s=460&u=f8bcdc42177463d700a934e2c4800093c65063fd&v=4",
+    tName: " — Shauna Niequist",
     tSay:
-      "y dalam industri percetakayang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menj."
+      "I think preparing food and feeding people brings nourishment not only to our bodies but to our spirits. Feeding people is a way of loving them, in the same way that feeding ourselves is a way of honoring our own createdness and fragility. "
+  },
+  {
+    tName: " — Thomas Keller ",
+    tSay:
+      "A recipe has no soul. You as the cook must bring soul to the recipe. "
+  },
+  {
+    tName: " — Wolfgang",
+    tSay:
+      "Cooking is like painting or writing a song. Just as there are only so many notes or colors, there are only so many flavors — it’s how you combine them that sets you apart."
   }
 ];
 
@@ -221,4 +227,4 @@ const videos = [
   }
 ];
 
-export { banners, about, learns, areas, testimonials, videos };
+export { banners, about, learns, areas, quotes, videos };

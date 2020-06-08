@@ -4,7 +4,7 @@
 @import "appbar.css";
 @import "banner.css";
 @import "category.css";
-@import "testimoni.css";
+@import "quote.css";
 @import "custom-materialize.css";
 @import "list-detail.css";
 @import "item-detail.css";
@@ -29,7 +29,7 @@ header {
 
 main {
   margin: 0;
-  padding: 20px;
+  padding: 25px;
 }
 
 main h1 {
@@ -68,14 +68,19 @@ nav {
   background-color: #ef5350 !important;
 }
 
-.col {
+#categoryList,
+#areaList,
+#ingredientList,
+#detailList,
+#result {
   cursor: pointer;
 }
 .wrapper {
-  min-height: 70%;
+  min-height: 80%;
 }
-.footer {
-  height: 30%;
+
+.pagination {
+  display: none;
 }
 
 @media only screen and (min-width: 500px) {
@@ -105,6 +110,3 @@ nav {
   }
 }
 
-.pagination {
-  display: none;
-}

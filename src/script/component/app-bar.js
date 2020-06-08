@@ -14,13 +14,13 @@ class AppBar extends HTMLElement {
       await this.render();
       this.toggleSearch();
     } catch (error) {
-      //   this.showResponseMessage(error);
+      this.showResponseMessage(error);
     }
   };
 
   toggleSearch = () => {
     this.shadowDOM
-      .querySelector(".openInputSearch")
+      .querySelector(".search-wrapper")
       .addEventListener("click", () => {
         this.shadowDOM.querySelector(".overlay").style.display = "block";
       });
@@ -79,7 +79,7 @@ class AppBar extends HTMLElement {
         font-size: 13px;
         border: none;
         float: left;
-        width: 80%;
+        width: 50%;
         background: transparent;
         border-radius: 20px 0px 0px 20px;
         outline: 0;
@@ -89,20 +89,15 @@ class AppBar extends HTMLElement {
         border-radius: 20px 0px 0px 20px;
       }
       
-      .search-wrapper button {
-        float: left;
-        width: 20%;
-        padding: 8px;
-        background: #ef5350;
-        font-size: 15px;
-        border: none;
-        cursor: pointer;
-        border-radius: 20px 20px 20px 20px;
-        outline: 0;
-      }
       
       .search-wrapper .fa {
-        color: white !important;
+        float: right;
+        color: red !important;
+        font-size: 15px;
+        padding: 15px;
+        border: none;
+        border-radius: 50%;
+        outline: 0;
       }
 
       .overlay {
@@ -167,6 +162,16 @@ class AppBar extends HTMLElement {
         color: #ef5350 !important;
       }
 
+      @media only screen and (max-width: 600px) {
+        
+        .search-wrapper .fa {
+          font-size: 15px;
+          padding: 10px;
+          margin-top: 5px;
+        }
+
+      }
+
       @media only screen and (min-width: 992px) {
         .logo {
           font-size: 25px;
@@ -176,23 +181,9 @@ class AppBar extends HTMLElement {
           top: 35px;
         }
 
-        .search-wrapper button {
-          float: left;
-          width: 10%;
-          padding: 14px;
-          background: #ef5350;
-          font-size: 17px;
-          border: none;
-          cursor: pointer;
-          border-radius: 20px 20px 20px 20px;
-          outline: 0;
-        }
-
-
         .search-wrapper input[type="text"] {
           padding: 15px;
           font-size: 15px;
-          width: 90%;
         }
       }
     </style>
@@ -211,14 +202,16 @@ class AppBar extends HTMLElement {
           id="searchElement"
           type="text"
           placeholder="Search Meal.."
-          class="openInputSearch"
         />
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <i class="fa fa-search"></i>
       </div>`;
     if (styles) {
       this.shadowRoot.appendChild(styles.cloneNode());
     }
   }
+  showResponseMessage = (message = "Check Your Connection") => {
+    alert(message);
+  };
 }
 
 //for export
