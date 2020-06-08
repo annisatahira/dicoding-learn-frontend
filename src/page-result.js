@@ -1,8 +1,13 @@
-import "../component/app-bar.js";
-import "../component/footer.js";
+import "regenerator-runtime";
+import "./style/style.css";
+import "materialize-css/dist/css/materialize.min.css";
+import "materialize-css/dist/js/materialize.min";
+import $ from "jquery";
+import "./script/component/app-bar.js";
+import "./script/component/footer.js";
 
-import SearchData from "../action/page-result.js";
-import PageDetail from "../component/page-detail.js";
+import SearchData from "./script/action/page-result.js";
+import PageDetail from "./script/component/page-detail.js";
 
 const main = () => {
   const setValue = async () => {

@@ -200,7 +200,7 @@ class AppBar extends HTMLElement {
         <span class="closebtn">×</span>
           <div class="overlay-content">
             <form action="pageResult.html">
-            <input type="text" id="keywordSearch" placeholder="Search.." name="search" />
+            <input type="text" id="keywordSearch" placeholder="Search Meal.." name="search" />
             <button id="searchButtonElement" type="submit"><i class="fa fa-search"></i></button>
           </form>
         </div>
@@ -210,7 +210,7 @@ class AppBar extends HTMLElement {
         <input
           id="searchElement"
           type="text"
-          placeholder="Search All Recipe You Want"
+          placeholder="Search Meal.."
           class="openInputSearch"
         />
         <button type="submit"><i class="fa fa-search"></i></button>

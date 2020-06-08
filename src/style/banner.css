@@ -16,21 +16,24 @@ banner-item > img {
 
 .text-banner {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 45%;
 }
 
-.text-banner h1,
-p {
+.text-banner p {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
 }
 
 .text-banner h1 {
   font-size: 45px;
   color: #ef5350;
   font-weight: bold;
+  text-align: center;
 }
 
 @media only screen and (min-width: 992px) {
@@ -38,10 +41,9 @@ p {
     height: 540px;
   }
 
-  .text-banner h1,
-  p {
+  .text-banner h1 {
     text-align: center;
-    font-size: 45px;
+    font-size: 35px;
   }
 }
 

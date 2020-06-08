@@ -7,12 +7,12 @@ class LearnItem extends HTMLElement {
   render() {
     this.innerHTML = `
     <div class="col s4 m4 l4">
-          <div class="card red accent-2 darken-1">
+          <div class="card grey darken-4">
             <img
               src=${this._item.bgImg}
             />
             <div class="card-content white-text">
-              <span class="card-title">${this._item.title}</span>
+              <span class="card-title"><span>${this._item.title}</span>
             </div>
           </div>
     </div>`;

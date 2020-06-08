@@ -1,3 +1,8 @@
+import "jquery";
+import $ from "jquery";
+import "materialize-css/dist/js/materialize.min";
+import "materialize-css/dist/css/materialize.min.css";
+
 class PageDetail {
   constructor(id) {
     this.id = id;
@@ -40,16 +45,9 @@ class PageDetail {
                   <h5 style="padding-top:20px;"><a href=${meal.strYoutube}>Click to Watch Video</a></h5>
                 </div>
               </div>
-              <div class="col s12 m12 l7">
-                <div class="col s12">
-                  <ul class="tabs">
-                    <li class="tab col s6 m6 l6"><a href="#ingredients">Ingredients</a></li>
-                    <li class="tab col s6 m6 l6">
-                      <a href="#instruction">Instruction</a>
-                    </li>
-                  </ul>
-                </div>
-                <div id="ingredients" class="col s12 l12 scrollable">
+              <div class="col s12 m12 l7 scrollable">
+                <div id="ingredients" class="col s12 l12">
+                <h4>Ingredients</h4>
                 <table>
                 <thead>
                   <tr>
@@ -142,7 +140,8 @@ class PageDetail {
                 </tbody>
               </table>
                 </div>
-                <div id="instruction" class="col s12 scrollable">
+                <div id="instruction" class="col s12">
+                <h4>How To Cook</h4>
                   <p>
                     ${meal.strInstructions}
                   </p>
@@ -155,10 +154,10 @@ class PageDetail {
     });
   };
 
-  tabFunction = () => {
-    $(".tabs").tabs({});
-    this.hideCellIfEmpty();
-  };
+  // tabFunction = () => {
+  //   $(".tabs").tabs("select", "ingredients");
+  //   // this.hideCellIfEmpty();
+  // };
 
   hideCellIfEmpty = () => {
     const ingredientItemElement = document.querySelectorAll("td");
@@ -174,7 +173,12 @@ class PageDetail {
 
   showDetail = () => {
     document.querySelector("#overlayItem").style.display = "block";
-    this.tabFunction();
+    this.hideCellIfEmpty();
+    // document.querySelector(".closebtn").addEventListener("click", () => {
+    //   // document.querySelector(".overlay").style.display = "none";
+    //   const removeItem = document.getElementById("overlayItem");
+    //   removeItem.remove();
+    // });
     $(".closebtn").on("click", function(e) {
       e.preventDefault();
       document.getElementById("overlayItem").style.display = "none";

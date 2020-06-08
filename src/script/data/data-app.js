@@ -1,77 +1,70 @@
 const banners = [
   {
-    id: 2,
-    title: "Bismillah",
-    bannerImage:
-      "https://www.helpguide.org/wp-content/uploads/young-woman-and-man-preparing-meal.jpg",
-    description:
-      "Lor but also the leap into electronic typesetting, remaining essentially unchanged. raset sheets containing Lorem Ipsum passages, and more ."
-  },
-  {
     id: 1,
-    title: "Quick Learn",
+    title: "Cooking Anything, Anytime",
     bannerImage:
-      "https://cdn.vox-cdn.com/thumbor/6nuGrh340E58tg1mJUoaW5CyKEA=/0x0:5500x3671/1200x800/filters:focal(2310x1396:3190x2276)/cdn.vox-cdn.com/uploads/chorus_image/image/66563372/GettyImages_849177432.0.jpg",
-    description:
-      "Lor but also the leap into electronic typesetting, remaining essentially unchanged. raset sheets containing Lorem Ipsum passages, and more ."
+      "https://images.squarespace-cdn.com/content/v1/54498f46e4b0f17352048b6d/1565976750696-CKRHGWEPDSMFX7V2OTK2/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/20190617_F_AliAlix_Pasta-211.jpg?format=2500w",
+    description: "Decide what it is you want to cook! "
   },
   {
     id: 2,
-    title: "Morning Coffe",
+    title: "New Food Ideas",
     bannerImage:
-      "https://metiza.com/wp-content/uploads/2019/04/healthy-cooking-classes-in-Canada.jpg",
-    description:
-      "Lor but also the leap into electronic typesetting, remaining essentially unchanged. raset sheets containing Lorem Ipsum passages, and more ."
+      "https://realco.atypic-pp.be/wp-content/uploads/2014/09/Restaurants.jpg",
+    description: "it’s a good place to start if you have no idea how to cook."
+  },
+  {
+    id: 2,
+    title: "Easy Instruction and Recipes",
+    bannerImage:
+      "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/12/2018/03/food-photography-hot-restaurants.jpg",
+    description: "Give you recipes based on what’s already in your fridge."
   }
 ];
 
 const about = [
   {
-    title: "About Cooka",
+    title: "What's So Great About Cooking?",
     description:
-      "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun. Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang menggunakan kalimat-kalimat dari Lorem Ipsum, dan seiring munculnya perangkat lunak Desktop Publishing seperti Aldus PageMaker juga memiliki versi Lorem Ipsum."
+      "There are four clear reasons to brave the kitchen, battle the dirty dishes and deal with whiny kids who would rather eat pizza from Dominoes every night."
   },
   {
-    title: "About Cooka",
+    title: "Cooking at home is better for the environment",
     description:
-      "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun. Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang menggunakan kalimat-kalimat dari Lorem Ipsum, dan seiring munculnya perangkat lunak Desktop Publishing seperti Aldus PageMaker juga memiliki versi Lorem Ipsum."
+      "“Without question, it takes less energy and resources to cook at home,”  says David Pimentel, Professor Emeritus at the College of Agriculture and Life Sciences at Cornell University.  Pimentel explains it takes seven kilocalories of energy to produce food, but processing, packaging and transporting it takes another ten."
   },
   {
-    title: "About Cooka",
+    title: "It is less expensive to cook food yourself",
     description:
-      "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun. Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang menggunakan kalimat-kalimat dari Lorem Ipsum, dan seiring munculnya perangkat lunak Desktop Publishing seperti Aldus PageMaker juga memiliki versi Lorem Ipsum."
+      "Contrary to all the hype about how eating at Burger King is cheaper than a home cooked meal, this cliché has turned out not to be true.  Now measured in several different ways, the only way fast food is actually “cheaper” is if you compare it solely on calories.  Comparing serving size, weight, or nutritional content, home cooked meals come out ahead in price."
+  },
+
+  {
+    title: "Food you cook is healthier",
+    description:
+      "Most people do not cook at home with a deep fat fryer and the majority of home recipes do not call for high fructrose corn syrup.  Simply put, you would be hard pressed to make the food you cook yourself as unhealthy as the frozen pizzas, pre-prepared veggie burgers and fried egg rolls touted to make your life “easier. Plus, the more you process food, the less nutritious it becomes. “Research suggests that people who prepare food at home (versus food prepared outside the home) do eat healthier, emails Juliana Cohen, a Research Fellow in the Department of Nutrition at the Harvard School of Public Health”  "
   },
   {
-    title: "About Cooka",
+    title: "Food you cook is tastier",
     description:
-      "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun. Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang menggunakan kalimat-kalimat dari Lorem Ipsum, dan seiring munculnya perangkat lunak Desktop Publishing seperti Aldus PageMaker juga memiliki versi Lorem Ipsum."
-  },
-  {
-    title: "About Cooka",
-    description:
-      "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun. Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang menggunakan kalimat-kalimat dari Lorem Ipsum, dan seiring munculnya perangkat lunak Desktop Publishing seperti Aldus PageMaker juga memiliki versi Lorem Ipsum."
-  },
-  {
-    title: "About Cooka",
-    description:
-      "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun. Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang menggunakan kalimat-kalimat dari Lorem Ipsum, dan seiring munculnya perangkat lunak Desktop Publishing seperti Aldus PageMaker juga memiliki versi Lorem Ipsum."
+      "With the internet there are literally thousands of recipes to pick from instantaneously, family favorites for years to come at your fingertips.  You can even filter out recipes now for only those that are quick and cheap with Yummly (you can also add taste preferences and other food restrictions on the site) or Punchfork can help you pick the most popular dishes from hundreds of food blogs.  EatatHomeCooks can provide you with quick and easy recipes and shopping lists for an entire week."
   }
 ];
 
 const learns = [
   {
-    title: "hiiii",
+    title: "CHEAPER to cook for yourself",
     bgImg:
       "https://www.refrigeratedfrozenfood.com/ext/resources/NEW_RD_Website/DefaultImages/default-at-home-cooking-feature.jpg?1484170386"
   },
 
   {
-    title: "1",
+    title: "Cooking RECONNECTS Families",
     bgImg:
-      "https://www.helpguide.org/wp-content/uploads/young-woman-and-man-preparing-meal.jpg"
+      "https://thumbs.dreamstime.com/b/happy-family-kitchen-having-fun-cooking-together-healthy-food-home-black-164161727.jpg"
   },
   {
-    title: "2",
+    title: "DEEPEN connection With Friends",
     bgImg:
       "https://www.outincanberra.com.au/wp-content/uploads/2017/05/shutterstock_582618685.jpg"
   }
@@ -121,82 +114,81 @@ const areas = [
   {
     strArea: "Indian",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.planetware.com/photos-large/IND/india-top-attractions-taj-mahal.jpg"
   },
   {
     strArea: "Irish",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://c0.thejournal.ie/media/2013/03/rock-of-cashel-tipperary-752x501.jpg"
   },
   {
     strArea: "Italian",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.kids-world-travel-guide.com/images/italy_pisa_shutterstock_52642909.jpg"
   },
   {
     strArea: "Jamaican",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://3j0grh44ocny4a6kcn288izx-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/caribbean-hotels-2020-half-moon-950x530.jpg"
   },
   {
     strArea: "Japanese",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.theinvisibletourist.com/wp-content/uploads/2017/04/featured_85.jpg"
   },
   {
     strArea: "Kenyan",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.discoverwalks.com/blog/wp-content/uploads/2019/11/kicckenya.jpg"
   },
   {
     strArea: "Malaysian",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.touropia.com/gfx/d/iconic-skyscrapers/petronas_twin_towers.jpg?v=1"
   },
   {
     strArea: "Mexican",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.touropia.com/gfx/d/step-pyramids-of-the-world/chichen_itza.jpg?v=1"
   },
   {
     strArea: "Moroccan",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.wondermondo.com/wp-content/uploads/2017/10/Koutoubia.jpg"
   },
   {
     strArea: "Russian",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://anekatempatwisata.com/wp-content/uploads/2017/03/Benteng-Kremlin-Moscow.jpg"
   },
   {
     strArea: "Spanish",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://img.traveltriangle.com/blog/wp-content/uploads/2020/01/CoverSpain-in-june0310.jpg"
   },
   {
     strArea: "Thai",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://res.klook.com/image/upload/c_fill,w_750,h_500,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/n9i874x7aggerzmvcykk.webp"
   },
   {
     strArea: "Tunisian",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://lh3.googleusercontent.com/proxy/FbiCxhJ3W0jgXvNhf32aD4Jsy_oviCjPDxGisReUMcOKYyBgEQs-REiuv8MqFJ0tpC7Wy2BbDtEPgW6XuYHA3xk1b5D0oYOQrupF4e5yBZ34Mryr-LcvSb15yr0zIhCr2AWY37Z7nfg"
   },
   {
     strArea: "Turkish",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://besthqwallpapers.com/Uploads/11-6-2018/55184/thumb2-sultan-ahmet-mosque-4k-turkish-landmarks-fountains-blue-mosque.jpg"
   },
   {
     strArea: "Unknown",
-    imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+    imgArea: "https://i.ytimg.com/vi/ppE_hE4JO08/maxresdefault.jpg"
   },
   {
     strArea: "Vietnamese",
     imgArea:
-      "https://zonews.org/wp-content/uploads/2018/01/new_york_city_laws_810_500_55_s_c1.jpg"
+      "https://www.vietnam-tour.biz/wp-content/uploads/2019/03/landmark-81-the-tallest-building-in-Vietnam.jpg"
   }
 ];
 
@@ -219,13 +211,13 @@ const testimonials = [
 
 const videos = [
   {
-    source: "https://www.youtube.com/embed/tgbNymZ7vqY"
+    source: "https://www.youtube.com/embed/MURPf_6r8z4",
   },
   {
-    source: "https://www.youtube.com/embed/tgbNymZ7vqY"
+    source: "https://www.youtube.com/embed/RCxpqotKE2s",
   },
   {
-    source: "https://www.youtube.com/embed/tgbNymZ7vqY"
+    source: "https://www.youtube.com/embed/X5oD_thIk3c",
   }
 ];
 

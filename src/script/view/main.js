@@ -140,7 +140,7 @@ const main = () => {
     "#learnList",
     "learn-item",
     learns,
-    "Why Cooking"
+    "Why We Should Learn Cooking"
   );
   learnList.renderItems();
 
@@ -150,7 +150,7 @@ const main = () => {
         "#areaList",
         "area-item",
         areas,
-        "Area Categories"
+        "World's Meal Categories"
       );
       await areaList.renderItems();
       await showPagination();

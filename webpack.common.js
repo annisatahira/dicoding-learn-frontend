@@ -4,8 +4,8 @@ const path = require("path");
 module.exports = {
   entry: {
     index: "./src/index.js",
-    pageList: "./src/page-list.js"
-    // resultApp: "./src/view/page-result.js"
+    pageList: "./src/page-list.js",
+    pageResult: "./src/page-result.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -68,6 +68,11 @@ module.exports = {
       template: "./src/pageList.html",
       filename: "pageList.html",
       chunks: ["pageList"]
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pageResult.html",
+      filename: "pageResult.html",
+      chunks: ["pageResult"]
     })
   ]
 };

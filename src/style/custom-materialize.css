@@ -16,11 +16,12 @@
 .card .card-title {
   font-size: 18px !important;
   text-align: center;
+  font-weight: bold !important;
 }
 
 .slick-next:before,
 .slick-prev:before {
-  color: teal !important;
+  color: #d65755f0 !important;
 }
 
 .card-image img {
@@ -30,7 +31,7 @@
 }
 
 li.active {
-  background-color: teal !important;
+  background-color: #d65755f0 !important;
 }
 
 .tabs .tab a:focus,

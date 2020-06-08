@@ -13,11 +13,8 @@
 h4 {
   font-weight: bold !important;
 }
-
-.scrollable {
-  height: 500px;
-  z-index: 1;
-  overflow-x: hidden;
+.scrollable h4 {
+  padding: 20px;
 }
 
 .scrollable p,
@@ -104,7 +101,6 @@ ol {
     margin: auto;
     padding: 20px;
     z-index: 1;
-    overflow-x: hidden;
   }
 
   .tabs .tab a {
@@ -129,8 +125,15 @@ ol {
 }
 
 @media only screen and (min-width: 501px) {
+  #itemContent img {
+    padding-top: 20px;
+    height: 200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 992px) {
   #itemContent {
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   #itemContent img {
@@ -141,12 +144,18 @@ ol {
 }
 
 /* EXTRA LARGE SCREEN */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   #itemContent {
     overflow: hidden;
   }
   #itemContent img {
     padding-top: 30px;
     height: 350px;
+  }
+
+  .scrollable {
+    height: 500px;
+    z-index: 1;
+    overflow-x: hidden;
   }
 }
