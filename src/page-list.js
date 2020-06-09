@@ -13,9 +13,11 @@ const main = () => {
   const setValue = async () => {
     try {
       let value = await localStorage.getItem("data");
-      const pageList = await new PageList(value);
-      return pageList;
-    } catch (error) {}
+      let pageList = new PageList(value);
+      pageList;
+    } catch (message) {
+      showResponseMessage(message);
+    }
   };
 
   const setIdDetail = () => {
@@ -29,11 +31,14 @@ const main = () => {
 
   const getIdDetail = () => {
     $("#detailList").on("click", function() {
-      let a = localStorage.getItem("id");
-      console.log(a);
-      let pageDetail = new PageDetail(a);
+      let idMeal = localStorage.getItem("id");
+      let pageDetail = new PageDetail(idMeal);
       pageDetail;
     });
+  };
+
+  const showResponseMessage = (message = "Check Your Connection") => {
+    console.log(message);
   };
   setIdDetail();
   getIdDetail();

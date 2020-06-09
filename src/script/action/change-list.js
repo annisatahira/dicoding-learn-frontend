@@ -11,7 +11,6 @@ class ChangeList {
     const _listItem = this.listItem;
     const _listId = this.listId;
     const _selector = this.selector;
-    console.log(_listItem);
     $(_listItem).click(function() {
       const index = $(_listItem).index(this);
       let element = document.querySelectorAll(_listId);

@@ -17,8 +17,8 @@ class PageDetail {
       const responseJson = await response.json();
       await this.renderDetailItem(responseJson.meals);
       this.showDetail();
-    } catch (error) {
-      //   this.showResponseMessage(error);
+    } catch (message) {
+      this.showResponseMessage(message);
     }
   };
 
@@ -154,12 +154,7 @@ class PageDetail {
     });
   };
 
-  // tabFunction = () => {
-  //   $(".tabs").tabs("select", "ingredients");
-  //   // this.hideCellIfEmpty();
-  // };
-
-  hideCellIfEmpty = () => {
+  hideCellIfEmpty() {
     const ingredientItemElement = document.querySelectorAll("td");
 
     for (let i = 0; i < ingredientItemElement.length; i++) {
@@ -169,21 +164,20 @@ class PageDetail {
       )
         $(ingredientItemElement[i]).hide();
     }
-  };
+  }
 
-  showDetail = () => {
+  showDetail() {
     document.querySelector("#overlayItem").style.display = "block";
     this.hideCellIfEmpty();
-    // document.querySelector(".closebtn").addEventListener("click", () => {
-    //   // document.querySelector(".overlay").style.display = "none";
-    //   const removeItem = document.getElementById("overlayItem");
-    //   removeItem.remove();
-    // });
     $(".closebtn").on("click", function(e) {
       e.preventDefault();
       document.getElementById("overlayItem").style.display = "none";
       $("#overlayItem").remove();
     });
+  }
+
+  showResponseMessage = (message = "Check Your Connection") => {
+    alert(message);
   };
 }
 

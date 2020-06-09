@@ -169,8 +169,8 @@ const main = () => {
     //
     //  get num of item and compute num of pages
     //
-    var nItem = $(item).length;
-    var nPages = Math.ceil(nItem / $(".pagination").data("page-size"));
+    const nItem = $(item).length;
+    const nPages = Math.ceil(nItem / $(".pagination").data("page-size"));
     //
     // save num pages as a data attribute of pagination element
     //
@@ -178,7 +178,7 @@ const main = () => {
     //
     // Create the buttons on the fly
     //
-    for (var i = 1; i < nPages; i++) {
+    for (let i = 1; i < nPages; i++) {
       $("<li/>")
         .append($("<a/>", { href: "#", text: i + 1 }))
         .insertBefore(".pagination li:has([rel]):last");
@@ -195,13 +195,13 @@ const main = () => {
       //
       // The clicked element is the next one......
       //
-      var clickedElement = $(this);
-      var nextElement = clickedElement;
+      let clickedElement = $(this);
+      let nextElement = clickedElement;
 
       //
       // ....if the clicked element is Next or Prev buttons
       //
-      var nextPrevAnchorElement = clickedElement.find("a[rel]");
+      let nextPrevAnchorElement = clickedElement.find("a[rel]");
       if (nextPrevAnchorElement.length == 1) {
         //
         // compute the next element
@@ -227,7 +227,7 @@ const main = () => {
       //
       // get the number of active page
       //
-      var currentPageNumber =
+      let currentPageNumber =
         +nextElement
           .find("a")
           .text()
@@ -236,7 +236,7 @@ const main = () => {
       //
       // get the page size
       //
-      var pageSize = +$(".pagination").data("page-size");
+      let pageSize = +$(".pagination").data("page-size");
       //
       // toggle visibility
       //
@@ -256,11 +256,7 @@ const main = () => {
   qTitle.innerHTML = `Quote's About Cooking`;
   quoteTitle.appendChild(qTitle);
 
-  const quoteList = new List(
-    "#quoteList",
-    "quote-item",
-    quotes
-  );
+  const quoteList = new List("#quoteList", "quote-item", quotes);
 
   quoteList.renderItems();
 

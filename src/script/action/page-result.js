@@ -1,9 +1,7 @@
 class SearchData {
   constructor(keyword) {
     this.keyword = keyword;
-    console.log(this.keyword);
     this.getResult();
-    this.renderResult();
   }
 
   getResult = async () => {
@@ -12,7 +10,6 @@ class SearchData {
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${this.keyword}`
       );
       const responseJson = await response.json();
-      console.log(responseJson);
       this.renderResult(responseJson.meals);
     } catch (message) {
       const resultElement = document.querySelector("#result");
